@@ -24,7 +24,11 @@
 Paginas en las que se inspiran:
 
 Apple: https://support.apple.com/es-es/HT201252
+
 Mercado Libre: https://www.mercadolibre.com.ar/
+
 Tienda Mia: https://tiendamia.com/ar/
+
 Amazon: https://www.amazon.com/
+
 Facebook: https://www.facebook.com/

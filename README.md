@@ -6,11 +6,17 @@
   
   Conformado por:
   
-  Emanuel Gomez, Leandro.
-  Jimémez Mariano, Benjamín. 
+  Emanuel Gomez, Leandro. 
+  
+  Jimémez Mariano, Benjamín.
+  
   Birocco, Luciano Adrián.
-  García, Gabriel Oscar.
+  
+  García, Gabriel Oscar. 
+  
+  
+# Wireframes:
 
-Wireframes:
 1: https://www.figma.com/file/jNbE7jO82nMNnbtwdvTigm/SmartTech-2?node-id=0%3A1
+
 2: https://www.figma.com/file/328jgqNLIqpwnQn4qJXFmo/SmartTech?node-id=31%3A7

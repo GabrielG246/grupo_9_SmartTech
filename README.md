@@ -20,3 +20,11 @@
 1: https://www.figma.com/file/jNbE7jO82nMNnbtwdvTigm/SmartTech-2?node-id=0%3A1
 
 2: https://www.figma.com/file/328jgqNLIqpwnQn4qJXFmo/SmartTech?node-id=31%3A7
+
+Paginas en las que se inspiran:
+
+Apple: https://support.apple.com/es-es/HT201252
+Mercado Libre: https://www.mercadolibre.com.ar/
+Tienda Mia: https://tiendamia.com/ar/
+Amazon: https://www.amazon.com/
+Facebook: https://www.facebook.com/

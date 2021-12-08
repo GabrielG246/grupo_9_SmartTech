@@ -1,0 +1,27 @@
+{
+  "name": "smarttech",
+  "version": "1.0.0",
+  "description": "Repositorio del grupo 9.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielG246/grupo_9_SmartTech.git"
+  },
+  "keywords": [
+    "SmartTech",
+    "Digital House",
+    "Grupo9"
+  ],
+  "author": "Digital House Grupo 9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielG246/grupo_9_SmartTech/issues"
+  },
+  "homepage": "https://github.com/GabrielG246/grupo_9_SmartTech#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

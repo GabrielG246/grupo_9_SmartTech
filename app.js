@@ -3,8 +3,8 @@ const { get } = require("express/lib/response");
 const app = express();
 const path = require("path");
 
-app.listen(3000, ()=>{
-    console.log("Servidor corriendo en puerto 3000")
+app.listen(3001, ()=>{
+    console.log("Servidor corriendo en puerto 3001")
 });
 
 app.use(express.static("public"))

@@ -1,4 +1,4 @@
-footer  {
+.footer  {
     background-color: #424C5F;
     color: white;
     display: grid;
@@ -7,6 +7,8 @@ footer  {
     padding: 5px;
     gap: 10px;
     justify-items: start;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 
@@ -125,7 +127,7 @@ footer  {
 
 
 @media (min-width: 960px){
-    footer {
+    .footer {
         grid-template-columns: repeat(4, 25%);
         grid-template-rows: 50% 50%;
     }
@@ -163,7 +165,7 @@ footer  {
 }
 
 @media (min-width: 1280px) {
-    footer {
+    .footer {
         grid-template-columns: 10% 10% 15% 10% 10% 30% 15%;
         grid-template-rows: auto;
         margin-bottom: 0;

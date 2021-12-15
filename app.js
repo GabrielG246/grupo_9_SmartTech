@@ -20,3 +20,10 @@ app.get("/carrito.html", (req, res) => {
 app.get("/producto.html", (req, res) => {
     res.sendFile(path.resolve("./views/producto.html"))
 })
+
+app.get("/index.html", (req, res) => {
+    res.sendFile(path.resolve("./views/index.html"))
+})
+
+
+

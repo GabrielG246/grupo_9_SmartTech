@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="/css/normalyze.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productos-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-        <header>
+        <header class="header">
             <nav>
 
                 <!--Logo y Barra de busqueda-->
@@ -42,14 +44,106 @@
             </nav>
         </header>
     
+
+
+
+
+
+
 <!--++++++++++++++++++++++++++++++++++++++-->
+
+
+
+
+
 
         <main>
 
+            <div class="main_container">
+
+                <label class="product_photos">
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </label>
+
+                <div class="product">
+
+
+                    <img src="/img/producto_1.png" alt="Imagen del producto">
+                </div>
+
+                <!---------+++++++++++++++++++++++++++++++++++++++++++++---->
+
+                <div class="product_details">
+
+                    <h2 class="product_name"> PRODUCTO </h2>
+
+                    <div class="product_stars">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <h3 class="product_price"> $ 1379 </h3>
+
+                    <div class="product_specs">
+                        <header>Preferencias</header>
+                        <span>Color <i class="far fa-square"></i></span>
+                    </div>
+
+                    <form action="/" method="GET" class="product_buttons">
+                        <button>Comprar ahora <i class="fas fa-shopping-basket"></i></button>
+                        <button>Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
+                    </form>
+
+                </div>
+
+                <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+                <div class="product_info">
+                    <h4>Información del producto</h4>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ipsa velit! Itaque vero cumque exercitationem culpa saepe asperiores praesentium, voluptatum ea facilis ut distinctio reiciendis aspernatur obcaecati odit odio temporibus vitae voluptatem necessitatibus sint rerum ipsam facere ad harum. Ab quae minima, eveniet corporis sit magnam nesciunt? Natus, ipsum dicta!
+                </div>
+
+                <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+                <div class="seller_info">
+                    <h4>Información del vendedor</h4>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis tempore illo et quis voluptatum quas itaque, quia, saepe in sint perspiciatis sit incidunt magni sequi voluptatem reprehenderit magnam autem expedita doloremque exercitationem, architecto eum cupiditate. Culpa minima ut at modi?
+                </div>
+
+                <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+                <div class="product_simil">
+                <label class="product_simil-text">Productos Similares</label>
+                <div class="product_simil-objects">
+                    <a href="./producto.html"> <img src="/img/producto_2.png"> <footer class="foot_price"> $245 </footer> </a>
+                    <a href="./producto.html"> <img src="/img/producto_7.png"> <footer class="foot_price"> $262 </footer> </a>
+                    <a href="./producto.html"> <img src="/img/producto_1.png"> <footer class="foot_price"> $489 </footer> </a>
+                    <a href="./producto.html"> <img src="/img/producto_5.png"> <footer class="foot_price"> $234 </footer> </a>
+                    <a href="./producto.html"> <img src="/img/producto_4.png"> <footer class="foot_price"> $245 </footer> </a>
+                </div>
+                </div>
+
+            </div>
+
         </main>
 
+
+
+
+
+
+
+
 <!--++++++++++++++++++++++++++++++++++++++-->
-        <footer>
+        <footer class="footer">
 
             <div class="footer_logo-lit"> <img src="/img/logo.png"> </div>
 
@@ -70,8 +164,8 @@
             <div class="footer_contact">  
                 <ul type="none">
                     <li> Contacto </li>
-                    <li> <a href="#"> Tel: 123123123 </a> </li>
-                    <li> <a href="#"> Email: smarttechinc@hotmail.com </a> </li>
+                    <li> <a href="#"><i class="fas fa-phone-alt"></i> 123123123 </a> </li>
+                    <li> <a href="#"> <i class="far fa-envelope"></i> smarttechinc@hotmail.com </a> </li>
                 </ul>
             </div>
 

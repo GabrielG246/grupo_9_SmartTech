@@ -25,5 +25,8 @@ app.get("/index.html", (req, res) => {
     res.sendFile(path.resolve("./views/index.html"))
 })
 
+app.get("/login.html", (req, res) => {
+    res.sendFile(path.resolve("./views/login.html"))
+})
 
 

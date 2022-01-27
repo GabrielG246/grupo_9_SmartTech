@@ -18,46 +18,10 @@
 </head>
 <body>
 
-        <header class="header">
-            <nav>
-
-                <!--Logo y Barra de busqueda-->
-                <div class="nav_logo-search">
-                    <a href="./index.html" class="nav_logo"><img src="/img/logo.png"></a>
-                    <form method="GET" class="nav_search"> <input type="search" placeholder="Buscar en SmartTech:"> </form>
-                </div>
-
-                <!--Boton de ofertas, home y carrito de compras-->
-                <div class="nav_buttons">
-                <a href="#" class="nav_sale"> Ofertas </a>
-                <a href="./index.html" class="nav_home"> <i class="fas fa-home"></i> </a>
-                <a href="./carrito.html" class="nav_buy-cart"> Carrito </a>
-                </div>
-
-                <!--Botón hamburguesa, usuario y configuración de usuario-->
-                <div class="nav_right-buttons">
-                    <label class="button-burger"> <i class="fas fa-bars"></i> </label>
-                    <a href="./login.html" class="button-user"> <i class="far fa-user"></i> </a>
-                    <label class="button-config"> <i class="fas fa-cogs"></i> </label>
-                </div>
-
-            </nav>
-        </header>
+    <%- include('./partials/header') %>
     
-
-
-
-
-
-
-<!--++++++++++++++++++++++++++++++++++++++-->
-
-
-
-
-
-
-        <main>
+    <!--++++++++++++++++++++++++++++++++++++++-->
+       <main>
 
             <div class="main_container">
 
@@ -134,54 +98,14 @@
             </div>
 
         </main>
-
-
-
-
-
-
-
-
-<!--++++++++++++++++++++++++++++++++++++++-->
-        <footer class="footer">
-
-            <div class="footer_logo-lit"> <img src="/img/logo.png"> </div>
-
-            <div class="footer_logo-big"> <img src="/img/logo-grande.png"> </div>
-
-            <!--Footer Productos-->
-            <div class="footer_product"> 
-                <ul type="none">
-                    <li>Productos</li>
-                    <li> <a href="#"></a> SmartPhones </li>
-                    <li> <a href="#"></a> Accesorios </li>
-                    <li> <a href="#"></a> Ofertas </li>
-                    <li> <a href="#"></a> Planes </li>
-                </ul>
-            </div>
-
-            <!--Footer Contactos-->
-            <div class="footer_contact">  
-                <ul type="none">
-                    <li> Contacto </li>
-                    <li> <a href="#"><i class="fas fa-phone-alt"></i> 123123123 </a> </li>
-                    <li> <a href="#"> <i class="far fa-envelope"></i> smarttechinc@hotmail.com </a> </li>
-                </ul>
-            </div>
-
-            <div class="footer_info">
-                <ul type="none">
-                    <li> Sobre Nosotros</li>
-                    <li> Lorem ipsum dolor sit amet.</li>
-                </ul>
-            </div>
-
-            <div class="footer_social-webs">
-                <a href=""> <i class="foot_facebook fab fa-facebook"></i> </a>
-                <a href=""> <i class="foot_instagram fab fa-instagram"></i> </a>
-                <a href=""> <i class="foot_twitter fab fa-twitter"></i> </a>
-                <a href=""> <i class="foot_youtube fab fa-youtube"></i> </a>
-            </div>
-        </footer>
+        <!--++++++++++++++++++++++++++++++++++++++-->
+        <%- include('./partials/footer') %>
 </body>
 </html>
+
+
+
+
+
+
+

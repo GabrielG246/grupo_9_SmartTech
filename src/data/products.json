@@ -1,0 +1,50 @@
+[{
+    "id": 1,
+    "name": "IPhone 13 Pro",
+    "description": "El iPhone 13 tiene un nuevo chip llamado A15 Bionic de seis núcleos (dos de alta potencia y cuatro de eficiencia) que según la empresa, es un 50% más rápido que el de la competencia directa ",
+    "image": "/img/producto_1.png",
+    "colors": "Fuscia",
+    "price": "180.000",
+    "info":"Apple, Inc. es una empresa estadounidense que diseña y produce equipos electrónicos, software y servicios en línea. Tiene su sede central en el Apple Park, en Cupertino y la sede europea en la ciudad de Cork"
+  }, {
+    "id": 2,
+    "name": "Xiaomi Redmi Note 10 Pro",
+    "description": "El Redmi Note 10 Pro de Xiaomi, nos da un diseño moderno y resaltante, la comodidad de sus acabados nos permite llevarlo a cualquier lado en las manos. Cuenta con una pantalla AMOLED de 6,67 pulgadas , aún más clara y nítida de lo que imaginas, para apreciar súper bien todas las aplicaciones en tu teléfono.",
+    "image": "/img/producto_2.png",
+    "colors": "Pink",
+    "price": "100.000",
+    "info":"Xiaomi Corporation es una empresa china dedicada al desarrollo de equipos electrónicos, tanto telefónicos como de diversos artículos para el hogar. La compañía se ha abierto paso al mercado mundial inaugurando varias tiendas físicas en determinados países de Asia, Europa e Iberoamérica, además de su sitio web y distribuidores oficiales"
+  }, {
+    "id": 3,
+    "name": "Motorola Moto G100",
+    "description": "El Snapdragon 870 marca la diferencia por prestaciones, conectividad y capacidad para la ejecución de juegos sin inmutarse. Al SoC le acompañan 8 GB de memoria RAM LPDDR5 y 128 GB de almacenamiento UFS 3.1, componentes lo suficientemente holgados y de gran rapidez. Además, el Motorola Moto G100 no prescinde de tarjeta SD (hasta 1 TB) ni de conector de auriculares.",
+    "image": "/img/producto_4.png",
+    "colors": "Aquamarine",
+    "price": "80.000",
+    "info":"Motorola Mobility LLC, comercializada como Motorola, es una empresa estadounidense de telecomunicaciones y electrónica de consumo, y filial del conglomerado tecnológico chino Lenovo. La compañía fabrica principalmente teléfonos inteligentes y otros dispositivos móviles que ejecutan el sistema operativo Android."
+  }, {
+    "id": 4,
+    "name": "IPhone 13",
+    "description": "El Apple iPhone 13 representa una actualización menor del iPhone 12. Conservando la pantalla OLED de 6.1 pulgadas, el iPhone 13 cuenta con un procesador Apple A15 Bionic, con opciones de almacenamiento de 128GB. 256GB. o 512GB. La cámara principal del iPhone 13 es dual, con lentes wide y ultrawide de 12MP con IBIS y zoom óptico 2x, y la cámara frontal es de 12MP. El iPhone 13 tiene parlantes stereo, soporta carga rápida tanto por cable como inalámbrica, es resistente al polvo y agua, y soporta redes 5G.",
+    "image": "/img/producto_5.png",
+    "colors": "Teal",
+    "price": "150.000",
+    "info":"Apple, Inc. es una empresa estadounidense que diseña y produce equipos electrónicos, software y servicios en línea. Tiene su sede central en el Apple Park, en Cupertino y la sede europea en la ciudad de Cork"
+  }, {
+    "id": 5,
+    "name": "Xiaomi 11",
+    "description": "Dimension: 164.3 x 74.6 x 8.1 mm (Glass) / 8.6 mm (Leather)……Build:Glass front (Gorilla Glass Victus), glass back (Gorilla Glass 5) or eco leather back, aluminum frame…….DISPLAY: AMOLED, 1B colors, 120Hz, HDR10+, 1500 nits (peak)….Chipset:Qualcomm SM8350 Snapdragon 888 5G (5 nm)…..MAIN CAMERA:Triple 108 MP, f/1.9, 26mm (wide), 1/1.33, 0.8µm, PDAF, OIS 13 MP, f/2.4, 123˚ (ultrawide), 1/3.06, 1.12µm 5 MP, f/2.4, (macro), 1/5.0, 1.12µm",
+    "image": "/img/producto_6.png",
+    "colors": "Blue",
+    "price": "85.000",
+    "info":"Xiaomi Corporation es una empresa china dedicada al desarrollo de equipos electrónicos, tanto telefónicos como de diversos artículos para el hogar. La compañía se ha abierto paso al mercado mundial inaugurando varias tiendas físicas en determinados países de Asia, Europa e Iberoamérica, además de su sitio web y distribuidores oficiales"
+  }, {
+    "id": 6,
+    "name": "Xiaomi Note 9T",
+    "description": "El terminal monta una pantalla IPS de 6,53 pulgadas con resolución FullHD+, 4 GB de memoria RAM y dos opciones de almacenamiento diferentes, no solo en cantidad sino también en velocidad, y una triple cámara trasera con un sensor principal de 48 megapíxeles. ",
+    "image": "/img/producto_7.png",
+    "colors": "Aquamarine",
+    "price": "78.000",
+    "info":"Xiaomi Corporation es una empresa china dedicada al desarrollo de equipos electrónicos, tanto telefónicos como de diversos artículos para el hogar. La compañía se ha abierto paso al mercado mundial inaugurando varias tiendas físicas en determinados países de Asia, Europa e Iberoamérica, además de su sitio web y distribuidores oficiales"
+  }]
+   

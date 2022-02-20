@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
-    <title>Detalle del producto</title>
+   
+    <title><%= searchProduct.name %></title>
+    
+   
 
     <link rel="stylesheet" href="/css/normalyze.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -25,6 +28,8 @@
 
             <div class="main_container">
 
+                
+
                 <label class="product_photos">
                     <i class="fas fa-mobile-alt"></i>
                     <i class="fas fa-mobile-alt"></i>
@@ -32,33 +37,37 @@
                     <i class="fas fa-mobile-alt"></i>
                     <i class="fas fa-mobile-alt"></i>
                 </label>
+                
 
                 <div class="product">
 
 
-                    <img src="/img/producto_1.png" alt="Imagen del producto">
+                    <img src="<%= searchProduct.image %>" alt="Imagen del producto">
                 </div>
 
                 <!---------+++++++++++++++++++++++++++++++++++++++++++++---->
 
-                <div class="product_details">
-
-                    <h2 class="product_name"> PRODUCTO </h2>
-
-                    <div class="product_stars">
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-
-                    <h3 class="product_price"> $ 1379 </h3>
-
-                    <div class="product_specs">
-                        <header>Preferencias</header>
-                        <span>Color <i class="far fa-square"></i></span>
-                    </div>
+                    <div class="product_details">
+    
+                        <h2 class="product_name"> <%= searchProduct.name %> </h2>
+    
+                        <div class="product_stars">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+    
+                        <h3 class="product_price"> $ <%= searchProduct.price %> </h3>
+    
+                        <div class="product_specs">
+                            <header>Preferencias</header>
+                            <span>Color <i class="far fa-square"></i></span>
+                        </div>
+                
+                
+                  
 
                     <form action="/" method="GET" class="product_buttons">
                         <button>Comprar ahora <i class="fas fa-shopping-basket"></i></button>
@@ -72,7 +81,8 @@
                 <div class="product_info">
                     <h4>Información del producto</h4>
                     <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ipsa velit! Itaque vero cumque exercitationem culpa saepe asperiores praesentium, voluptatum ea facilis ut distinctio reiciendis aspernatur obcaecati odit odio temporibus vitae voluptatem necessitatibus sint rerum ipsam facere ad harum. Ab quae minima, eveniet corporis sit magnam nesciunt? Natus, ipsum dicta!
+                    <br>
+                    <%= searchProduct.description %> 
                 </div>
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -80,18 +90,21 @@
                 <div class="seller_info">
                     <h4>Información del vendedor</h4>
                     <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis tempore illo et quis voluptatum quas itaque, quia, saepe in sint perspiciatis sit incidunt magni sequi voluptatem reprehenderit magnam autem expedita doloremque exercitationem, architecto eum cupiditate. Culpa minima ut at modi?
+                    <%= searchProduct.info %> 
                 </div>
+
+               
+               
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
                 <div class="product_simil">
                 <label class="product_simil-text">Productos Similares</label>
                 <div class="product_simil-objects">
-                    <a href="./producto.html"> <img src="/img/producto_2.png"> <footer class="foot_price"> $245 </footer> </a>
-                    <a href="./producto.html"> <img src="/img/producto_7.png"> <footer class="foot_price"> $262 </footer> </a>
-                    <a href="./producto.html"> <img src="/img/producto_1.png"> <footer class="foot_price"> $489 </footer> </a>
-                    <a href="./producto.html"> <img src="/img/producto_5.png"> <footer class="foot_price"> $234 </footer> </a>
-                    <a href="./producto.html"> <img src="/img/producto_4.png"> <footer class="foot_price"> $245 </footer> </a>
+                    <a href="./1"> <img src="/img/producto_1.png"> <footer class="foot_price"> $180.000 </footer> </a>
+                    <a href="./2"> <img src="/img/producto_2.png"> <footer class="foot_price"> $100.000 </footer> </a>
+                    <a href="./3"> <img src="/img/producto_4.png"> <footer class="foot_price"> $80.000 </footer> </a>
+                    <a href="./4"> <img src="/img/producto_5.png"> <footer class="foot_price"> $150.000 </footer> </a>
+                    <a href="./5"> <img src="/img/producto_6.png"> <footer class="foot_price"> $85.000 </footer> </a>
                 </div>
                 </div>
 

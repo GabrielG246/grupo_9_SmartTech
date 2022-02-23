@@ -7,9 +7,9 @@ const path = require("path");
 const publicPath= path.resolve(__dirname,'../public');
 
                 //ROUTERS//
-const mainRoutes= require('./routes/main');
-const userRoutes= require('./routes/user')
-const productRoutes= require('./routes/product');
+const mainRoutes= require('./routes/main-routes');
+const userRoutes= require('./routes/user-routes')
+const productRoutes= require('./routes/product-routes');
 
 app.use('/',mainRoutes);
 app.use('/',userRoutes);

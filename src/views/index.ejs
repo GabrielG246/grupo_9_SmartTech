@@ -2,20 +2,12 @@
 <html lang="es">
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
-    <title>SmartTech</title>
-
-    <link rel="stylesheet" href="/css/normalyze.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+<%- include("./partials/head") %> 
+    
     <link rel="stylesheet" href="/css/index-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
-
+    <title>SmartTech</title>
 </head>
-<body>
+<body class="index-body">
 
        <%- include('./partials/header') %> 
     
@@ -32,17 +24,21 @@
 
                     
                     <label><i class="fas fa-chevron-circle-left"></i></label>
+
                     <section class="article_container">
 
-                        <a href="/products/1"> <article> <img src="/img/producto_1.png"> </article> </a>
-                        <a href="/products/2"> <article> <img src="/img/producto_2.png"> </article> </a>
-                        <a href="/products/6"> <article> <img src="/img/producto_7.png"> </article> </a>
-                        <a href="/products/3"> <article> <img src="/img/producto_4.png"> </article> </a>
-                        <a href="/products/4"> <article> <img src="/img/producto_5.png"> </article> </a>
+                        <% productDB.forEach(product => { %>
+                            <%const maxNumber= productDB.length%>
+                            <%const randomID= parseInt(Math.random()*(maxNumber-0));%>
+
+                                <a href="/products/item/<%= randomID %>"> <article> <img src="/img/productImages/<%= product.image %>"> </article> </a>
+
+                        <% }); %>
+                                
                     </section>
                     <label> <i class="fas fa-chevron-circle-right"></i> </label>
 
-                </div
+                </div>
 
                 
                 <label>OFERTAS</label>
@@ -51,11 +47,15 @@
                     
                     <label><i class="fas fa-chevron-circle-left"></i></label>
                     <section class="article_container">
-                        <a href="/products/3"> <article> <img src="/img/producto_4.png"> </article> </a>
-                        <a href="/products/4"> <article> <img src="/img/producto_5.png"> </article> </a>
-                        <a href="/products/2"> <article> <img src="/img/producto_2.png"> </article> </a>
-                        <a href="/products/5"> <article> <img src="/img/producto_6.png"> </article> </a>
-                        <a href="/products/1"> <article> <img src="/img/producto_1.png"> </article> </a>
+
+                        <% productDB.forEach(product => { %>
+                            <%const maxNumber= productDB.length%>
+                            <%const randomID= parseInt(Math.random()*(maxNumber-0));%>
+
+                                <a href="/products/item/<%= randomID %>"> <article> <img src="/img/productImages/<%= product.image %>"> </article> </a>
+
+                        <% }); %>
+                        
                     </section>
                     <label> <i class="fas fa-chevron-circle-right"></i> </label>
 

@@ -13,8 +13,11 @@ const controller={
    },
    products: (req,res)=>{
        res.render('products',{products})
-   }
-
+   },
+   edit:(req,res)=>{
+    let productEdit = products.find(unProducto => unProducto.id == req.params.id);
+       res.render('productEdit',{productEdit})
+   },
 }
 
 module.exports= controller;

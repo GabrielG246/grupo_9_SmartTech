@@ -1,5 +1,5 @@
 .header {
-    width: 100vw;
+    width: 100%;
 }
 
 nav {
@@ -127,6 +127,7 @@ nav {
     background-color: #506284;
     padding: 3px 2.8px;
     margin-right: 8px;
+    text-decoration: none;
 }
 
 

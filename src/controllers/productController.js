@@ -12,7 +12,7 @@ const controller={
     detail: (req,res)=> {
         let searchProduct = productsDB.find(unProducto => unProducto.id == req.params.id);
           
-       res.render('productDetail',{searchProduct:searchProduct})
+       res.render('productDetail',{product: searchProduct})
    },
    products: (req,res)=>{
        res.render('products',{productsDB})

@@ -6,20 +6,31 @@
   
   Conformado por:
   
-  Emanuel Gomez, Leandro. 
-  
-  Jimémez Mariano, Benjamín.
-  
-  Birocco, Luciano Adrián.
-  
+  Gomez,Leandro Emanuel  
+
   García, Gabriel Oscar. 
   
   
 # Wireframes:
 
+Version Desktop:
+
 1: https://www.figma.com/file/jNbE7jO82nMNnbtwdvTigm/SmartTech-2?node-id=0%3A1
 
 2: https://www.figma.com/file/328jgqNLIqpwnQn4qJXFmo/SmartTech?node-id=31%3A7
+
+Version Mobile-First:
+
+Home:  https://wireframe.cc/pro/pp/3420b825d503907 
+
+Detalle de Producto:  https://wireframe.cc/pro/pp/120d98fe6503918
+
+Carrito de compras:  https://wireframe.cc/pro/pp/051795581503931
+
+Formulario Registro:  https://wireframe.cc/pro/pp/fc22f55b2503940 
+
+Formulario Login :  https://wireframe.cc/pro/pp/128f7d489503947
+
 
 Paginas en las que se inspiran:
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Editar <%=productEdit.name %> </title>
+
+    <link rel="stylesheet" href="/css/normalyze.css">
+    <link rel="stylesheet" href="/css/login-style.css">
+    <link rel="stylesheet" href="/css/register-style.css">
+    <link rel="stylesheet" href="/css/productEdit-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+        <header class="log-reg_header">
+            <nav class="nav_header">
+
+                <div class="button_back">
+                    <a href="/"><i class="fas fa-arrow-left"></i></a>                
+                </div>
+
+                <div class="logo_login">
+                    <img src="/img/logo-grande.png">
+                </div>
+
+                <div><!--Contenido vacio--></div>
+
+            </nav>
+        </header>
+
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+        <main>
+
+            <h1> Edición de Producto  </h1>
+
+            <div class="formulario_edit">
+
+                <form action="/products/<%=productEdit.id %>/edit?_method=PUT" method="GET">  
+
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" class="form_user-name" id="name" placeholder="<%=productEdit.name %>">
+
+                    <label for="description">Descripción</label>
+                    <input type="text" name="description" class="form_user-name" id="description" placeholder="<%=productEdit.description %>">
+
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" class="form_user-name" id="price" placeholder="<%=productEdit.price %>">
+
+                    <label for="color">Color</label>
+                    <input type="text" name="color" class="form_user-name" id="color" placeholder="<%=productEdit.color %>" >
+
+                    <label for="info">Información del vendedor</label>
+                    <input type="text" name="info" class="form_user-name" id="info" placeholder="<%=productEdit.info %>" >
+
+                    <label for="image">Foto actual de producto</label>
+                    <div class="editImage">
+                    <img src="<%=productEdit.image %>">
+                    </div>
+                    <button type="submit" class="submit_button"> Actualizar producto </button>
+                </form>
+
+       
+
+                
+
+            </div>
+
+        </main>
+
+
+    
+</body>
+</html>

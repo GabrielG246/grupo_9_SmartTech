@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("./partials/head") %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/product-create_form.css">
+    <title>Nuevo Producto</title>
+</head>
+<body class="product-create_body">
+    <%- include("./partials/header") %>
+
+    <main class="product-create_container">
+        <form action="/products/addProduct" method="POST" class="product-create_form" enctype="multipart/form-data">
+
+            <div class="product-create_name">
+            <label for="product-name">Nombre del producto:</label>
+            <input type="text" name="productName" id="product-name" placeholder="Ingresar nombre" required>
+            </div>
+
+
+            <div class="product-create_description">
+            <label for="product-description">Descripción del producto:</label>
+            <input type="text" name="productDescription" id="product-description" placeholder="Ingresar Descripción" required>
+            </div>
+
+
+            <div class="product-create_image">
+            <label for="product-image">Imagen del producto:</label>
+            <input type="file" name="productImage" id="product-image" required>
+            </div>
+
+
+            <div class="product-create_specs">
+            <label for="product-specs">Especificaciones del producto:</label>
+            <input type="text" name="productSpecs" id="product-category" placeholder="Ingresar información" required>
+            </div>
+
+
+            <div class="product-create_color">
+            <label for="product-color">Color del producto:</label>
+            <input type="color" name="productColor" id="product-color" required>
+            </div>
+
+
+            <div class="product-create_price">
+            <label for="product-price">Precio del producto:</label>
+            <input type="number" name="productPrice" id="product-price" placeholder="0000" required>
+            </div>
+
+            <div class="product-create_submit">
+                <button type="submit">Agregar producto</button>
+            </div>
+
+
+
+        </form>
+    </main>
+
+    <%- include("./partials/footer") %> 
+</body>
+</html>

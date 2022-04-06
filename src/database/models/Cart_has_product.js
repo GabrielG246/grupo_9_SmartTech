@@ -24,20 +24,23 @@ module.exports= (sequelize,dataTypes) => {
     
     const CartHasProduct= sequelize.define(alias,cols,config);
     
-    CartHasProduct.associate= function(models){
-        CartHasProduct.belongsTo(models.Cart,{
-            foreignKey: "carts_id",
-            as:"cart"
 
-        })
-        CartHasProduct.belongsTo(models.Product,{
-            foreignKey: "products_id",
-            as:"product"
+    // No eliminar, desarollamos más adelante //
+    
+    // CartHasProduct.associate= function(models){
+    //     CartHasProduct.belongsTo(models.Cart,{
+    //         foreignKey: "carts_id",
+    //         as:"cart"
 
-        })
+    //     })
+    //     CartHasProduct.belongsTo(models.Product,{
+    //         foreignKey: "products_id",
+    //         as:"product"
+
+    //     })
 
 
-    }
+    // }
 
     return CartHasProducts;
     

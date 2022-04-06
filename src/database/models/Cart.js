@@ -37,15 +37,30 @@ module.exports= (sequelize,dataTypes) => {
     const Cart= sequelize.define(alias,cols,config);
 
     Cart.associate= function(models){
-        Cart.belongsTo(models.User,{
-            foreignKey: "users_id",
-            as: "user"
+
+        // Dejar esta relación, si no funciona o da problemas 
+        // No borrar, solo comentar 
+
+        Cart.belongsToMany(models.Product,{
+            as:'products',
+            through:'carts_has_products',
+            foreignKey:'carts_id',
+            otherKey:'products_id',
+            timestamps: true
         })
+
+
+        // *** No Eliminar, quedan pendientes para asociar //
+
+        // Cart.belongsTo(models.User,{
+        //     foreignKey: "users_id",
+        //     as: "user"
+        // })
     
-        Cart.hasMany(models.Cart_has_product,{
-            foreignKey:"carts_id",
-            as:"cart_has_product"
-        })
+        // Cart.hasMany(models.Cart_has_product,{
+        //     foreignKey:"carts_id",
+        //     as:"cart_has_product"
+        // })
     }
     return Cart;
     

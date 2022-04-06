@@ -46,16 +46,23 @@ module.exports= (sequelize,dataTypes) => {
     
     const User= sequelize.define(alias,cols,config);
 
+
     User.associate= function(models){
+
+        // asociacion para traer los roles de los usuarios 
+        
         User.belongsTo(models.Rol,{
             foreignKey: "roles_id",
             as: "rol"
         })
-        
-        User.hasMany(models.Cart,{
-            foreignKey:"users_id",
-            as: "carts"
-        })
+
+
+        // No Eliminar , queda pendiente para el carrito //
+
+        // User.hasMany(models.Cart,{
+        //     foreignKey:"users_id",
+        //     as: "carts"
+        // })
     
         }
 

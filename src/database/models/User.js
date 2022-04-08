@@ -1,6 +1,6 @@
 module.exports= (sequelize,dataTypes) => {
 
-    let alias = "Users" ; 
+    let alias = "User" ; 
     
     let cols= {
         id:{
@@ -51,11 +51,15 @@ module.exports= (sequelize,dataTypes) => {
 
         // asociacion para traer los roles de los usuarios 
         
-        User.belongsTo(models.Rol,{
-            foreignKey: "roles_id",
-            as: "rol"
+        User.belongsTo(models.Role,{
+         foreignKey: "roles_id",
+            as: "role"
         })
 
+        //User.belongsTo(models.Roles,{
+          //  foreignKey: "roles_id",
+            //as: "rol"
+        //})
 
         // No Eliminar , queda pendiente para el carrito //
 

@@ -26,9 +26,9 @@ const productController= require('../controllers/productController');
 
 // router.get("/",productController.products)
 
-// router.get("/addProduct", productController.newProductGET);
+router.get("/addProduct", productController.newProductGET);
 
-// router.post("/addProduct", upload.single("productImage"), productController.newProductPOST);
+router.post("/addProduct", upload.single("productImage"), productController.newProductPOST);
 
 
 

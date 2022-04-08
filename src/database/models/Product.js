@@ -41,18 +41,18 @@ module.exports= (sequelize,dataTypes) => {
     // Dejar esta relación, si no funciona o da problemas 
     // No borrar, solo comentar 
     
-    Product.associate= function(models){
+   // Product.associate= function(models){
     
-        Product.belongsToMany(models.Cart,{
-            as:'Carts',
-            through: 'cart_has_products',
-            foreignKey: 'products_id',
-            otherKey:'carts_id',
-            timestamps: false
-        })
+      //  Product.belongsToMany(models.Cart,{
+      //      as:'Carts',
+      //      through: 'cart_has_products',
+      //      foreignKey: 'products_id',
+      //      otherKey:'carts_id',
+      //      timestamps: false
+      //  })
     
     
-    }
+    //}
     // No eliminar, asociaciones pendientes para el carrito //
     
     // Product.associate= function(models){

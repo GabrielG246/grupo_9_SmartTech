@@ -41,13 +41,13 @@ module.exports= (sequelize,dataTypes) => {
         // Dejar esta relación, si no funciona o da problemas 
         // No borrar, solo comentar 
 
-        Cart.belongsToMany(models.Product,{
-            as:'products',
-            through:'carts_has_products',
-            foreignKey:'carts_id',
-            otherKey:'products_id',
-            timestamps: true
-        })
+      //  Cart.belongsToMany(models.Product,{
+       //     as:'products',
+       //     through:'carts_has_products',
+      //      foreignKey:'carts_id',
+       //     otherKey:'products_id',
+      //      timestamps: true
+      //  })
 
 
         // *** No Eliminar, quedan pendientes para asociar //

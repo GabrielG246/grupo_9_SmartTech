@@ -1,6 +1,6 @@
 module.exports= (sequelize,dataTypes) => {
 
-    let alias = "Carts" ; 
+    let alias = "Cart" ; 
     
     let cols= {
         id:{
@@ -52,10 +52,10 @@ module.exports= (sequelize,dataTypes) => {
 
         // *** No Eliminar, quedan pendientes para asociar //
 
-        // Cart.belongsTo(models.User,{
-        //     foreignKey: "users_id",
-        //     as: "user"
-        // })
+         Cart.belongsTo(models.User,{
+             foreignKey: "users_id",
+             as: "user"
+         })
     
         // Cart.hasMany(models.Cart_has_product,{
         //     foreignKey:"carts_id",

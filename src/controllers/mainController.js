@@ -11,7 +11,7 @@ const controller={
     carrito: async (req,res)=>{
       
             try {
-                const carts= await db.Cart.findAll({attributes:{exclude:[]},include:['users']});
+                const carts= await db.Cart.findAll();
                 res.json(carts);
                 
             } catch (error) {

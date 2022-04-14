@@ -53,7 +53,9 @@ Venimos muy bien con la resolución de problemas y errores que se nos presentan,
 Al momento lo que venimos haciendo nos resulta, aunque deberíamos modificar varias cosas. Para el sprint 4 planeamos organizarnos mejor y comunicarnos con mas frecuencia.
 ////////////////////////////////////////////////////////////////////
 
-# SPRINT 4 
+# SPRINT 5
+
+Retro sobre sprint 4
 
 * Comenzar a hacer: 
 Ponernos un poco mas al dia con las fechas, no dejar pasar tanto tiempo entre reuniones dailys/weeklys
@@ -67,3 +69,17 @@ Aplicamos una metodologia de dejar asentado todo lo que va haciendo uno y lo dej
 * Hacer menos: 
 
 //////////////////////////////////////////////////////////////////////
+
+# SPRINT 6 
+
+Retro sobre sprint 5
+
+* Comenzar a hacer: 
+
+* Hacer más:
+
+* Continuar haciendo:
+
+* Hacer menos:
+
+///////////////////////////////////////////////////////////////////////

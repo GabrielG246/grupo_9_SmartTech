@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "41499614",
     "database": "smart_tech_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

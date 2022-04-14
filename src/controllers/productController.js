@@ -32,7 +32,15 @@ const db= require('../database/models')
         })
         
         res.redirect("/products");
- }
+ },
+
+    pruebaStock: (req,res)=>{
+
+        db.Products.findAll()
+        .then(product=>{
+            res.send({product:product})
+        })
+    }
 }
 
 module.exports= controller;

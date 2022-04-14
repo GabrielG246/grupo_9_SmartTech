@@ -30,6 +30,8 @@ router.get("/addProduct", productController.newProductGET);
 
 router.post("/addProduct", upload.single("productImage"), productController.newProductPOST);
 
+router.get("/stock", productController.pruebaStock);
+
 
 
 module.exports= router;

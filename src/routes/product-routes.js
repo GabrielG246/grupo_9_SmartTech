@@ -22,9 +22,9 @@ const upload= multer({storage});
 const productController= require('../controllers/productController');
 
 
-// router.get("/item/:id", productController.detail);
+//router.get("/item/:id", productController.detail);
 
-// router.get("/",productController.products)
+//router.get("/",productController.products)
 
 router.get("/addProduct", productController.newProductGET);
 

@@ -1,23 +1,30 @@
-                // EXPRESS //
+// EXPRESS //
 const express = require("express");
 const app = express();
 
-                    //Paquete path para carpeta public 
+//REQUIRES
+const session= require('express-session');
+
+        //PUBLIC SETTING 
 const path = require("path");
 const publicPath= path.resolve(__dirname,'../public');
 
-                //ROUTERS//
+        //ROUTERS//
 const mainRoutes= require('./routes/main-routes');
 const userRoutes= require('./routes/user-routes')
 const productRoutes= require('./routes/product-routes');
 
-app.use('/',mainRoutes);
-app.use('/',userRoutes);
-app.use('/products',productRoutes);
+//MIDDLEWARES
+app.use(session({secret:'Secret data from session'}));
 
-                //Sirve para capturar datos de formulario 
+        //FORMS SETTINGS 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json()); 
+
+//ROUTES
+app.use('/',mainRoutes);
+app.use('/users',userRoutes);
+app.use('/products',productRoutes);
 
 
                 //Carpeta archivos estaticos

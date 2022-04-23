@@ -22,16 +22,24 @@ const upload= multer({storage});
 const productController= require('../controllers/productController');
 
 
-// router.get("/item/:id", productController.detail);
+router.get("/item/:id", productController.detail); // Detalle de producto 
 
-// router.get("/",productController.products)
+router.get("/edit/item/:id", productController.edit); // Formulario de edicion de producto
 
-router.get("/addProduct", productController.newProductGET);
+router.put("/edit/item/:id", productController.update); // Accion de formulario de edicion [PUT]
 
-router.post("/addProduct", upload.single("productImage"), productController.newProductPOST);
+router.get("/addProduct", productController.newProductGET); // Ruta para crear producto 
 
-router.get("/stock", productController.pruebaStock);
+router.post("/addProduct", upload.single("productImage"), productController.newProductPOST); //// Ruta para crear producto [POST]
 
+router.get("/delete/item/:id", productController.delete); // Formulario para eliminar producto
+
+router.delete("/delete/item/:id", productController.destroy);// Accion de eliminado 
+
+
+router.get("/",productController.products) // Listar todos los productos 
+
+router.get("/search", productController.search); // Lista la busqueda del usuario 
 
 
 module.exports= router;

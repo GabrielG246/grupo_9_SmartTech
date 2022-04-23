@@ -10,7 +10,7 @@ module.exports= (sequelize,dataTypes) => {
         allowNull: false
     },
     name:{
-        type: dataTypes.STRING(45),
+        type: dataTypes.STRING,
         allowNull: false
     },
     price:{
@@ -18,15 +18,19 @@ module.exports= (sequelize,dataTypes) => {
         allowNull: false
     },
     description:{
-        type: dataTypes.STRING(500),
+        type: dataTypes.STRING,
         allowNull: false
     },
     specifications:{
-        type: dataTypes.STRING(500),
+        type: dataTypes.STRING,
         allowNull: false
     },
     color:{
-        type: dataTypes.STRING(45),
+        type: dataTypes.STRING,
+        allowNull: false
+    },
+    image:{
+        type: dataTypes.STRING,
         allowNull: false
     }
     };
@@ -36,7 +40,7 @@ module.exports= (sequelize,dataTypes) => {
         timestamps:false
     }
     
-    const Product= sequelize.define(alias,cols,config);
+    const Products= sequelize.define(alias,cols,config);
     
     // Dejar esta relación, si no funciona o da problemas 
     // No borrar, solo comentar 
@@ -64,5 +68,5 @@ module.exports= (sequelize,dataTypes) => {
     
     //     }
     
-    return Product;
+    return Products;
     };

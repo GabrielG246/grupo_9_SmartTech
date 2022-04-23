@@ -35,6 +35,10 @@ module.exports= (sequelize,dataTypes) => {
         roles_id:{
             type: dataTypes.INTEGER,
             
+        },
+        userImage:{
+            type: dataTypes.STRING,
+            allowNull: false
         }
     
     }

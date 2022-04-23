@@ -11,7 +11,7 @@ const controller={
     getAll: async(req, res)=>{
         try {
             const users= await db.User.findAll({attributes:{exclude:['password','roles_id']},include:['role']});
-            res.json(users);
+            res.render("allUsers",{users:users});
             
         } catch (error) {
             res.json(error)

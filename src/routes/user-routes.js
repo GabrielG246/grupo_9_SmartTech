@@ -7,6 +7,7 @@ const {check}= require('express-validator')
 
 //CONTROLLERS
 const userController= require('../controllers/userController');
+const { register } = require('../controllers/userController');
 
 //MULTER SETTINGS
 const storage= multer.diskStorage({
@@ -22,16 +23,22 @@ const upload= multer({storage});
 
 
 //VALIDACIONES
-const registerValidator= [check('userName').notEmpty().withMessage('Debe ingresar un nombre').bail(),
-check('userSName').notEmpty().withMessage('Debe ingresar un apellido').bail(),
+const registerValidator= [check('userName')
+    .notEmpty().withMessage('Debe ingresar un nombre').bail()
+    .isLength({min:2}).withMessage('Nombre debe tener más de 2 caracteres').bail(),
+check('userSName')
+    .notEmpty().withMessage('Debe ingresar un apellido').bail()
+    .isLength({min:2}).withMessage('Apellido debe tener más de 2 caracteres').bail(),
 check('userEmail')
     .notEmpty().withMessage('Debe ingresar un email').bail()
     .isEmail().withMessage('Debe ingresar un email valido').bail(),
-check('userNickName').notEmpty().withMessage('Debe ingresar un nombre de usuario').bail(),
+check('userNickName')
+    .notEmpty().withMessage('Debe ingresar un nombre de usuario').bail()
+    .isLength({min:5}).withMessage('Su nickname debe tener mas de 5 caracteres').bail(),
 check('userPass')
     .notEmpty().withMessage('Debe ingresar una contraseña').bail()
     .isLength({min:8}).withMessage('Su contraseña debe tener mas de 8 caracteres').bail()
-];
+]
 
 const loginValidator=[
     check('userNickName').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
@@ -41,7 +48,7 @@ const loginValidator=[
 
 
 //USUARIOS
-router.get('/', userController.getAll);
+router.get('/allUsers', userController.getAll);
 
 //FORMULARIO DE LOGUEO
 router.get("/login", userController.login);
@@ -53,7 +60,16 @@ router.post('/login', loginValidator, userController.loginPOST)
 router.get("/register" ,userController.register);
 
 //PROCESO DE REGISTRO
-router.post('/register',upload.single('userImage'), registerValidator, userController.registerPOST);
+router.post('/register',upload.single('userImage'),registerValidator, userController.registerPOST);
+
+//USUARIO
+router.get('/profile', userController.user)
+
+//CERRAR SESSION//
+router.get('/logOut', userController.logOut)
+
+//FORMULARIO DE EDICION DE USUARIO//
+router.get('/profile/edit', userController.userEditForm)
 
 
 

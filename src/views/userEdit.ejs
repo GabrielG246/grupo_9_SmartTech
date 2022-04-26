@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Información de Usuario</title>
+    <title>Usuario</title>
+
+    <%-include('./partials/head')%>
+
+    <link rel="stylesheet" href="/css/userEdit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"
+
 </head>
-<body>
+<body class="userBody">
 
     <%-include('./partials/header')%>
         
-    <main class="userEdit-main">
+    <main class="userEdit_main">
+        <img src="/img/usersImages/<%=userLogged.userImage%>" class="userEdit_image">
+        <h2 class="userEdit_nickName"><%=userLogged.username%></h2>
+        <ul class="userEdit_data-container">
+            <li class="userEdit_data"><b>Nombre:</b> <%=userLogged.name%></li>
+            <li class="userEdit_data"><b>Apellido:</b> <%=userLogged.last_name%></li>
+            <li class="userEdit_data"><b>Correo:</b> <%=userLogged.email%></li>
+        </ul>
         
+        <div class="userEdit_config-container">
+
+            <div class="userEdit_edit">
+                <a href="/users/profile/edit" class="userEdit_edit-a"><i class="fas fa-pen"></i> Editar Perfil</a>
+            </div>
+
+            <div class="userEdit_delete">
+                <a href="" class="userEdit_delete-a"><i class="fas fa-user-slash"></i> Eliminar</a>
+            </div>
+        </div>
     </main>
 
     <%-include('./partials/footer')%>

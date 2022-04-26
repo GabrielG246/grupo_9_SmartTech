@@ -19,8 +19,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 80vw
-
+    width: 80%;
 }
 
 .nav_logo {
@@ -129,6 +128,109 @@ nav {
     margin-right: 8px;
     text-decoration: none;
 }
+
+/* LISTA DE CONFIGURACIÓN */
+.button_options-container{
+    background-color: white;
+    border: solid 1px black;
+    position: fixed;
+    width: auto;
+    height: auto;
+    right: 15px;
+    top:70px;
+    padding: 5px; 
+    border-radius: 5px;
+    z-index:2 ;
+    display: none;
+}
+
+.button_options-list{
+    list-style: none;
+}
+
+.button_config{
+    margin: 5px 0px;
+}
+
+.button_add-product{
+    display: none;
+    margin: 5px 0px;
+}
+
+.arrow_of_button{
+    z-index: 3;
+    position: absolute;
+    top: -8px;
+    right: 8px;
+    width:0px;
+    height:0px;
+    border-left:9px solid transparent;
+    border-right:9px solid transparent; 
+    border-bottom:9px solid white;
+    font-size:0px;
+    line-height:0px;
+}
+
+/*CONFIGURACIÓN DE LISTA DE BOTÓN HAMBURGUESA*/
+.buttonBurguer_list-container{
+    width: 100%;
+    height: auto;
+    background-color: azure;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.buttonBurguer_ul{
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonBurguer_li{
+    font-size: 20px;
+    margin: 2px 0px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left:5px ;
+    font-weight: bold;
+}
+
+.buttonBurguer_li a{
+    text-decoration: none;
+    color: black;
+}
+
+.buttonBurguerIcon{
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+.buttonBurguer_li:hover{
+    background-color: #D6EAF8;
+}
+
+.buttonBurguer_ul-draw{
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    right:10px;
+    top: -24px;
+    background-color: azure;
+    border: 1px solid gray;
+    border-bottom: transparent;
+    border-top: transparent;
+}
+
+
 
 
 /* Media queries 650px */

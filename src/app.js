@@ -15,7 +15,11 @@ const userRoutes= require('./routes/user-routes')
 const productRoutes= require('./routes/product-routes');
 
 //MIDDLEWARES
-app.use(session({secret:'Secret data from session'}));
+app.use(session({
+        secret:'Secret data from session',
+        resave: true,
+        saveUninitialized: true
+        }));
 
         //FORMS SETTINGS 
 app.use(express.urlencoded({extended: false}));

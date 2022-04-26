@@ -2,7 +2,8 @@ const path= require('path');
 const fs= require('fs');
 const { fileURLToPath } = require('url');
 const { stringify } = require('querystring');
-const db= require('../database/models')
+const db= require('../database/models');
+const session = require("express-session");
 
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // const productsJSON= fs.readFileSync(productsFilePath, 'utf-8');

@@ -43,16 +43,22 @@
 
                     <label for="name_label">Nombre de Usuario</label>
                     <input type="text" name="userNickName" class="form_user-name" id="name_label" placeholder="Nombre de usuario o correo">
+                    <%if(locals.errors && errors.userNickName){ %>
+                        <p class="error_msg"> <%=errors.userNickName.msg%> </p>
+                    <%}%>
 
                     <label for="pass_label">Contraseña</label>
                     <input type="password" name="userPass" class="form_user-pass" id="pass_label" placeholder="Contraseña">
+                    <%if(locals.errors && errors.userPass){ %>
+                        <p class="error_msg"> <%=errors.userPass.msg%> </p>
+                    <%}%>
 
                     <button type="submit" class="submit_button">Iniciar Sesión</button>
                 </form>
 
-                <%if(locals.errors){%>
-                    <p>Error</p>
-                <%}%>
+                <%#if(error){%>
+                   <!-- <p><%#=error%></p> -->
+                <%#}%> 
                 
         <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 

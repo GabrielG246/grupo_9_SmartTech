@@ -66,7 +66,7 @@ Estamos intentando comunicarnos mas frecuentemente
 * Continuar haciendo: 
 Aplicamos una metodologia de dejar asentado todo lo que va haciendo uno y lo dejamos en discord para que el otro pueda estar al tanto 
 
-* Hacer menos: 
+* Hacer menos: -
 
 //////////////////////////////////////////////////////////////////////
 
@@ -74,12 +74,36 @@ Aplicamos una metodologia de dejar asentado todo lo que va haciendo uno y lo dej
 
 Retro sobre sprint 5
 
-* Comenzar a hacer: 
+* Comenzar a hacer: empezar a planificar las prioridades de las tareas, para no sobrecargarnos y perder el foco 
 
-* Hacer más:
+* Hacer más: debemos ocupar más el tablero de trello, nos cuesta darle uso por falta de costumbre 
 
-* Continuar haciendo:
+* Continuar haciendo: de a poco vamos logrando fluidez en la comunicación y forma de trabajo, debemos enfocarnos en seguir así 
 
-* Hacer menos:
+* Hacer menos: tal vez lo de discord no era lo mejor, y optamos por intentar darnos las actualizaciones con alguna call eventual 
 
 ///////////////////////////////////////////////////////////////////////
+# SPRINT 7
+
+Retro sobre sprint 6
+
+* Comenzar a hacer: dividirnos las tareas de los sprints pendientes, para poder llegar con todas y poner el proyecto al dia 
+
+* Hacer más: diagramamos las actividades pendientes, eso nos ayudó a poner el foco en las que necesitan tener prioridad y dejar de lado las que no son tan urgentes 
+
+* Continuar haciendo: pudimos implementar una comunicación más fluida entre nosotros 2, nos ayudo a sacar más rápido las tareas pendientes 
+
+* Hacer menos: sentimos que venimos bien y mejorando, habria que seguir buscando nuestras fallas para poder mejorarlas 
+
+//////////////////////////////////////////////////////////////////////
+# SPRINT 8
+
+Retro sobre sprint 7
+
+* Comenzar a hacer: pudimos mejorar el uso que le damos a trello, aunque sentimos que podriamos exprimirlo aún más
+
+* Hacer más: logramos tener una buena comunicación, ante cualquier eventualidad o problema que surja pudimos solucionarlo en conjunto 
+
+* Continuar haciendo: creemos que venimos bien con el timing de poder sacar las tareas pendientes a tiempo, gracias a que las dividimos y le dimos orden de prioridades como nos aconsejaron los profes 
+
+* Hacer menos: creemos que tal vez debemos enfocarnos más en las consignas que son requeridas, y dejar de lado las opcionales. Si sobra tiempo, si enfocarnos en esas tareas "opcionales"

@@ -35,7 +35,7 @@ const {Op} = require("sequelize");
 
     db.Products.findAll()
     .then(product=>{
-        res.render('products',{product:product})
+        res.render('products',{products:product})
     })
     .catch((error=> res.send(error)))
 

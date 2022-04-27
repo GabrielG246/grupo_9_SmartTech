@@ -9,6 +9,10 @@ const mainRoutes= require('./routes/main-routes');
 const userRoutes= require('./routes/user-routes')
 const productRoutes= require('./routes/product-routes');
 
+//APIS
+const apiProductRoutes= require("./routes/api/product-routes");
+const apiUserRoutes= require("./routes/api/user-routes");
+
 
 const app = express();
 
@@ -34,7 +38,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/',mainRoutes);
 app.use('/',userRoutes);
 app.use('/products',productRoutes);
-
+app.use(apiProductRoutes);
+app.use(apiUserRoutes);
 
 //SERVIDOR//
 app.listen(3005, ()=>{

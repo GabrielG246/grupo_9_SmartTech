@@ -7,7 +7,7 @@ const session= require('express-session');
 
         //PUBLIC SETTING 
 const path = require("path");
-const publicPath= path.resolve(__dirname,'../public');
+const methodOverride=require('method-override');
 
         //ROUTERS//
 const mainRoutes= require('./routes/main-routes');
@@ -21,9 +21,24 @@ app.use(session({
         saveUninitialized: true
         }));
 
-        //FORMS SETTINGS 
+
+//Sirve para capturar datos de formulario 
 app.use(express.urlencoded({extended: false}));
-app.use(express.json()); 
+app.use(express.json());
+
+        // EJS //
+app.set("view engine", "ejs");
+app.set("views", "./src/views");
+
+
+///Method-Override -Para pisar metodos PUT Y DELETE
+app.use(methodOverride('_method'));
+
+
+
+
+//Carpeta archivos estaticos
+app.use(express.static(path.join(__dirname, '../public'))); 
 
 //ROUTES
 app.use('/',mainRoutes);
@@ -31,22 +46,7 @@ app.use('/users',userRoutes);
 app.use('/products',productRoutes);
 
 
-                //Carpeta archivos estaticos
-app.use(express.static(path.join(__dirname, '../public'))); 
-
-
-                // EJS //
-app.set("view engine", "ejs");
-app.set("views", "./src/views");
-
-                ///Method-Override -Para pisar metodos PUT Y DELETE
-const methodOverride=require('method-override');
-app.use(methodOverride('_method'));
-
-
-
-                //SERVIDOR//
+//SERVIDOR//
 app.listen(3005, ()=>{
-    console.log("Servidor corriendo en puerto 3005")
+console.log("Servidor corriendo en puerto 3005")
 });
-

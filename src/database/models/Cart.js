@@ -30,8 +30,9 @@ module.exports= (sequelize,dataTypes) => {
     
     let config= {
         tableName: "carts" ,
-        timestamps: true
-    
+        timestamps: true,
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     }
     
     const Cart= sequelize.define(alias,cols,config);
@@ -52,10 +53,10 @@ module.exports= (sequelize,dataTypes) => {
 
         // *** No Eliminar, quedan pendientes para asociar //
 
-         Cart.belongsTo(models.User,{
-             foreignKey: "users_id",
-             as: "user"
-         })
+        //  Cart.belongsTo(models.User,{
+        //      foreignKey: "users_id",
+        //      as: "user"
+        //  })
     
         // Cart.hasMany(models.Cart_has_product,{
         //     foreignKey:"carts_id",

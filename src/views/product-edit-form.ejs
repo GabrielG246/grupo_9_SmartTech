@@ -42,22 +42,22 @@
 
             <div class="formulario_edit">
 
-                <form action="/products/edit/<%=productEdit.id %>?_method=PUT" method="post">  
+                <form action="/products/edit/item/<%=productEdit.id %>?_method=PUT" method="POST">  
 
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" class="form_user-name" id="name" placeholder="<%=productEdit.name %>">
+                    <input type="text" name="name" class="form_user-name" id="name" value="<%=productEdit.name %>">
 
                     <label for="description">Descripción</label>
-                    <input type="text" name="description" class="form_user-name" id="description" placeholder="<%=productEdit.description %>">
+                    <input type="text" name="description" class="form_user-name" id="description" value="<%=productEdit.description %>">
 
                     <label for="price">Precio</label>
-                    <input type="number" name="price" class="form_user-name" id="price" placeholder="<%=productEdit.price %>">
+                    <input type="number" name="price" class="form_user-name" id="price" value="<%=productEdit.price %>">
 
                     <label for="color">Color</label>
-                    <input type="text" name="color" class="form_user-name" id="color" placeholder="<%=productEdit.color %>" >
+                    <input type="text" name="color" class="form_user-name" id="color" value="<%=productEdit.color %>" >
 
-                    <label for="info">Información del vendedor</label>
-                    <input type="text" name="info" class="form_user-name" id="info" placeholder="<%=productEdit.info %>" >
+                    <label for="specs">Especificaciones</label>
+                    <input type="text" name="specs" class="form_user-name" id="specs" value="<%=productEdit.specifications %>" >
 
                    
                     <button type="submit" class="submit_button"> Actualizar producto </button>

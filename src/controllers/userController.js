@@ -77,7 +77,7 @@ const controller = {
             },
             old: req.body,
           });
-        } else if (userNName != undefined) {
+        } else if (userNName == req.body.userNickName) {
           res.render("register", {
             errors: {
               userNickName: {

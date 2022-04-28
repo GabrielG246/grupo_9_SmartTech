@@ -31,8 +31,7 @@ const controller={
                 
             }
             //se envia a la vista el nuevo array con los 4 productos
-            res.render('index',{userLogged: req.session.userLogged,products:mixedProducts})
-
+            res.render('index',{userLogged: session.userLogged, products:mixedProducts})
         } catch(error){
             res.json(error)
         }

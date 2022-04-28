@@ -24,7 +24,7 @@ const controller = {
         if (user) {
           if (bcrypt.compareSync(req.body.userPass, user.password)) {
             delete user.password;
-            req.session.userLogged = user;
+            session.userLogged = user;
             res.redirect("/users/profile");
           } else {
             res.render("login", {
@@ -142,14 +142,14 @@ const controller = {
 
   user: (req, res) => {
     res.render("userEdit", {
-      userLogged: req.session.userLogged,
+      userLogged: session.userLogged,
     });
   },
 
 
 
   userEditForm:(req, res)=>{
-      res.render('userEditForm', {userLogged: req.session.userLogged})
+      res.render('userEditForm', {userLogged: session.userLogged})
   }
 };
 

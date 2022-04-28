@@ -19,11 +19,11 @@
             <label class="button-burger"> <i class="fas fa-bars"></i> </label>
             <%-include('./buttonBurguerList')%>
             
-            <%#if(userLogged=undefined){%>
+            <%if(userLogged==undefined){%>
                 <a href="/users/login" class="button-user"> <i class="far fa-user"></i> </a>
-            <%#} else {%>
-            <!--    <a href="/users/profile" class="button-user"> <img src="/img/usersImages/<%#=userLogged.userImage%>"> </a> -->
-            <%#}%>
+            <%} else {%>
+                <a href="/users/profile" class="button-user_img"> <img src="/img/usersImages/<%=userLogged.userImage%>"> </a> 
+            <%}%>
 
             <a href="#" class="button-config"> <i class="fas fa-cogs"></i> </a>
         </div>

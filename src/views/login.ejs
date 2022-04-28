@@ -39,17 +39,27 @@
             <h1>Inicio de sesión</h1>
 
             <div class="formulario_login">
-                <form action="/" method="GET">
+                <form action="/users/login" method="POST">
 
                     <label for="name_label">Nombre de Usuario</label>
-                    <input type="text" name="user-name" class="form_user-name" id="name_label" placeholder="Nombre de usuario o correo">
+                    <input type="text" name="userNickName" class="form_user-name" id="name_label" placeholder="Nombre de usuario o correo">
+                    <%if(locals.errors && errors.userNickName){ %>
+                        <p class="error_msg"> <%=errors.userNickName.msg%> </p>
+                    <%}%>
 
                     <label for="pass_label">Contraseña</label>
-                    <input type="password" name="user-pass" class="form_user-pass" id="pass_label" placeholder="Contraseña">
+                    <input type="password" name="userPass" class="form_user-pass" id="pass_label" placeholder="Contraseña">
+                    <%if(locals.errors && errors.userPass){ %>
+                        <p class="error_msg"> <%=errors.userPass.msg%> </p>
+                    <%}%>
 
                     <button type="submit" class="submit_button">Iniciar Sesión</button>
                 </form>
 
+                <%#if(error){%>
+                   <!-- <p><%#=error%></p> -->
+                <%#}%> 
+                
         <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
                 <div class="forgotten_password">
@@ -59,7 +69,7 @@
         <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
                 <div class="register_button">
-                    <a href="/register">Crear cuenta nueva</a>
+                    <a href="/users/register">Crear cuenta nueva</a>
                 </div>
 
             </div>

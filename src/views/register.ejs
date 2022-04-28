@@ -41,30 +41,53 @@
 
             <div class="formulario_register">
 
-                <form action="/" method="GET">  
+                <form action="/users/register" method="POST" enctype="multipart/form-data">  
 
                     <label for="name_label">Nombre</label>
-                    <input type="text" name="name" class="form_user-name" id="name_label">
+                    <input type="text" name="userName" class="form_user-name" id="name_label"
+                    value="<%= locals.old && old.userName ? old.userName:''%>">
+                    <%if(locals.errors && errors.userName){%>
+                        <p class="errorMsg"> <%=errors.userName.msg%></p>
+                    <%}%>
 
                     <label for="lastName_label">Apellido</label>
-                    <input type="text" name="lastName" class="form_user-name" id="lastName_label">
+                    <input type="text" name="userSName" class="form_user-name" id="lastName_label"
+                    value="<%= locals.old && old.userSName ? old.userSName:''%>">
+                    <%if(locals.errors && errors.userSName){%>
+                        <p class="errorMsg"> <%=errors.userSName.msg%></p>
+                    <%}%>
 
                     <label for="email_label">Email</label>
-                    <input type="email" name="email" class="form_user-name" id="email_label">
+                    <input type="email" name="userEmail" class="form_user-name" id="email_label"
+                    value="<%= locals.old && old.userEmail ? old.userEmail:''%>">
+                    <%if(locals.errors && errors.userEmail){%>
+                        <p class="errorMsg"> <%=errors.userEmail.msg%></p>
+                    <%}%>
 
                     <label for="user_label">Nombre de Usuario</label>
-                    <input type="text" name="user-name" class="form_user-name" id="user_label" >
+                    <input type="text" name="userNickName" class="form_user-name" id="user_label"
+                    value="<%= locals.old && old.userNickName ? old.userNickName:''%>">
+                    <%if(locals.errors && errors.userNickName){%>
+                        <p class="errorMsg"> <%=errors.userNickName.msg%></p>
+                    <%}%>
 
                     <label for="pass_label">Contraseña</label>
-                    <input type="password" name="user-pass" class="form_user-name" id="pass_label" >
+                    <input type="password" name="userPass" class="form_user-name" id="pass_label">
+                    <%if(locals.errors && errors.userPass){%>
+                        <p class="errorMsg"> <%=errors.userPass.msg%></p>
+                    <%}%>
 
                     <label for="image">Foto de Usuario</label>
-                    <input class="form_user-name" type="file" name="image" id="image">
-                    
+                    <input class="form_user-name" type="file" name="userImage" id="image"
+                    value="<%= locals.old && old.userImage ? old.userImage:''%>">
+                    <%if(locals.errors && errors.userImage){%>
+                        <p class="errorMsg"> <%=errors.userImage.msg%></p>
+                    <%}%>
+
                     <button type="submit" class="submit_button">Crear cuenta </button>
                 </form>
 
-       
+                
 
                 
 

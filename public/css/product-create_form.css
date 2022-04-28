@@ -36,10 +36,10 @@
 .product-create_name {
     display: flex;
     flex-direction: column;
-    width:auto;;
+    width:auto;
     align-items: center;
     position: relative;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_name label {
     position: absolute;
@@ -61,7 +61,7 @@
     width: auto;
     align-items: center;
     position: relative;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_description label {
     position: absolute;
@@ -84,7 +84,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_image label {
     position: absolute;
@@ -107,7 +107,7 @@
     width: auto;
     align-items: center;
     position: relative;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_specs label {
     position: absolute;
@@ -128,9 +128,12 @@
     width: 400px;
     align-items: center;
     position: relative;
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_color label {
+    position: absolute;
+    top: -20px;
+    left: 0px;
 }
 .product-create_color input {
     width: 40px;
@@ -148,7 +151,7 @@
     align-items: center;
     margin: 3%;
     position: relative; 
-    margin: 5px 0;
+    margin: 12px 0;
 }
 .product-create_price label {
     position: absolute;

@@ -2,7 +2,8 @@ const path= require('path');
 const fs= require('fs');
 const { fileURLToPath } = require('url');
 const { stringify } = require('querystring');
-const db= require('../database/models')
+const db= require('../database/models');
+const session = require("express-session");
 
 const {Op} = require("sequelize");
 
@@ -17,7 +18,7 @@ const {Op} = require("sequelize");
             }
         })
         .then((product)=>{
-            res.render('products',{product:product})
+            res.render('products',{userLogged: session.userLogged,product:product})
         })
         .catch((error)=>{
             res.send(error)
@@ -27,7 +28,7 @@ const {Op} = require("sequelize");
     detail: (req,res)=> {
         db.Products.findByPk(req.params.id)
         .then(product=>{
-        res.render('productDetail',{product:product})
+        res.render('productDetail',{userLogged: session.userLogged,product:product})
     })
         .catch((error=> res.send(error)))
    },
@@ -35,13 +36,13 @@ const {Op} = require("sequelize");
 
     db.Products.findAll()
     .then(product=>{
-        res.render('products',{products:product})
+        res.render('products',{userLogged: session.userLogged,products:product})
     })
     .catch((error=> res.send(error)))
 
    },
     newProductGET: (req, res)=> {
-        res.render("product-create_form");
+        res.render("product-create_form", {userLogged: session.userLogged});
     },
     newProductPOST: (req, res)=> {
         
@@ -67,7 +68,7 @@ const {Op} = require("sequelize");
         db.Products.findByPk(req.params.id)
         .then(product=>{
             
-            res.render('product-edit-form', {productEdit:product})
+            res.render('product-edit-form', {userLogged: session.userLogged,productEdit:product})
         })
         .catch(error=>{
             res.send(error)
@@ -99,7 +100,7 @@ const {Op} = require("sequelize");
     delete: (req,res)=>{
         db.Products.findByPk(req.params.id)
         .then((product)=>{
-            res.render('productDelete',{product:product})
+            res.render('productDelete',{userLogged: session.userLogged,product:product})
         })
         .catch((error=> res.send(error)))
         

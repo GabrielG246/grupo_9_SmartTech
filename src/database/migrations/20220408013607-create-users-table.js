@@ -1,5 +1,7 @@
 'use strict';
 
+const { DataTypes } = require("sequelize/types");
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -49,6 +51,7 @@ module.exports = {
         } 
       }
     })
+    await queryInterface.addColumn('users', 'userImage', {type: DataTypes.STRING})
   },
 
   async down (queryInterface, Sequelize) {

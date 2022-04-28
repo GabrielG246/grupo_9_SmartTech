@@ -1,6 +1,7 @@
 //REQUIRES//
 const path= require('path');
 const fs= require("fs");
+const session = require("express-session");
 
 const db= require("../database/models");
 
@@ -30,8 +31,7 @@ const controller={
                 
             }
             //se envia a la vista el nuevo array con los 4 productos
-            res.render('index',{products:mixedProducts})
-
+            res.render('index',{userLogged: session.userLogged, products:mixedProducts})
         } catch(error){
             res.json(error)
         }

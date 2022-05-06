@@ -44,33 +44,44 @@ const loginValidator=[
     check('userNickName').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
     check('userPass').notEmpty().withMessage('Debe ingresar una contraseña')
 ]
+
+//const editValidator= require('../middlewares/userEdit-validator')
 //FIN DE VALIDACIONES
 
+//MIDDLEWARES//
+const userIsLogged= require('../middlewares/userIsLogged')
+const userIsNotLogged= require('../middlewares/userIsNotLogged')
+//FIN DE MIDDLEWARES//
 
 //USUARIOS
 router.get('/allUsers', userController.getAll);
 
 //FORMULARIO DE LOGUEO
-router.get("/login", userController.login);
+router.get("/login", userIsLogged,userController.login);
 
 //PROCESO DE LOGUEO
 router.post('/login', loginValidator, userController.loginPOST)
 
 //FORMULARIO DE REGISTRO
-router.get("/register" ,userController.register);
+router.get("/register", userIsLogged,userController.register);
 
 //PROCESO DE REGISTRO
 router.post('/register',upload.single('userImage'),registerValidator, userController.registerPOST);
 
 //USUARIO
-router.get('/profile', userController.user)
+router.get('/profile' , userIsNotLogged, userController.user)
 
 //CERRAR SESSION//
-router.get('/logOut', userController.logOut)
+router.post('/logOut', userController.logOut)
 
 //FORMULARIO DE EDICION DE USUARIO//
-router.get('/profile/edit', userController.userEditForm)
+router.get('/profile/edit', userIsNotLogged, userController.userEditFormGET)
 
+//PROCESO DE EDICIÓN DE USUARIO//
+router.put('/profile/edit',upload.single('userImage'),  userController.userEditFormPUT)
+
+//ELIMINAR USUARIO//
+router.delete('/profile/edit/delete', userController.userEditDELETE)
 
 
 module.exports= router;

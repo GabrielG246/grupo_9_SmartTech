@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
+    <script src="/scripts/headerScripts.js"></script>
    
     <title><%= product.name %></title>
     
@@ -19,38 +20,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 
 </head>
-<body class="product-detail_body">
+<body class="productDetail_body">
 
     <%- include('./partials/header') %>
     
     <!--++++++++++++++++++++++++++++++++++++++-->
-       <main class="product-detail_main_container">
+       <main class="productDetail_main-container">
 
-            <div class="product-detail_main">
+            <div class="productDetail_main">
 
-                
-                <div class="product-detail_images">
-                <label class="product-detail_mini_images">
-                    <i class="fas fa-mobile-alt"></i>
-                    <i class="fas fa-mobile-alt"></i>
-                    <i class="fas fa-mobile-alt"></i>
-                    <i class="fas fa-mobile-alt"></i>
-                    <i class="fas fa-mobile-alt"></i>
-                </label>
-                
+                <div class="productDetail_primary-info">
 
-                <div class='product-detail_image'>
+                <div class='productDetail_image'>
                     <img src="/img/productImages/<%=product.image %>" alt="Imagen del producto">
                 </div>
-                </div>
+            
 
                 <!---------+++++++++++++++++++++++++++++++++++++++++++++---->
 
-                    <div class="product-details_gral_info">
+                    <div class="productDetail_sell-info">
     
-                        <h2 class="product-name"> <%= product.name %> </h2>
+                        <h2 class="productDetail_name"> <%= product.name %> </h2>
     
-                        <div class="product-stars">
+                        <div class="productDetail-stars">
                             <button value="oneStar"><i class="far fa-star"></i></button>
                             <button value="twoStar"><i class="far fa-star"></i></button>
                             <button value="threeStar"><i class="far fa-star"></i></button>
@@ -59,26 +51,27 @@
 
                         </div>
     
-                        <h3 class="product-price"> $ <%= product.price %> </h3>
+                        <h3 class="productDetail_price"> $ <%= product.price %> </h3>
     
-                        <div class="product-specs">
+                        <div class="productDetail_specs">
                             <header>Preferencias</header>
                             <span>Color <i class="far fa-square"></i></span>
                         </div>
                 
-                        <div class="product-buy_button">
+                        <div class="productDetail_buy-button">
                         <a href="#"> <button>Comprar ahora <i class="fas fa-shopping-basket"></i></button> </a>
                         </div>
 
-                        <div class="product-add_cart">
+                        <div class="productDetail_add-cart">
                         <button type="submit">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
                         </div>  
                 
-                </div>
+                    </div>
+                    </div>
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-                <div class="product-info">
+                <div class="productDetail-info">
                     <h4>Información del producto</h4>
                     <br>
                     <br>
@@ -87,7 +80,7 @@
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-                <div class="seller-info">
+                <div class="productDetail_seller-info">
                     <h4>Información del vendedor</h4>
                     <br>
                     <%= product.info %> 

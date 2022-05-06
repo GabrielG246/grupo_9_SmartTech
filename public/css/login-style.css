@@ -108,6 +108,12 @@
     margin-bottom: 20px;
 }
 
+.rememberMe_checkbox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 8px;
+}
 
 .submit_button {
     display: flex;

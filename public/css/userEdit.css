@@ -57,7 +57,7 @@
 .userEdit_edit{
     width: 140px;
     height: 50px;
-    background-color: #30FF17;
+    background-color: #64C27C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,7 +77,7 @@
 .userEdit_delete{
     width: 140px;
     height: 50px;
-    background-color: #DD4713;
+    background-color: #CC5C5B;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,6 +92,99 @@
     font-weight: 600;
     color: black;
 }
+
+/*---ELIMINAR USUARIO---*/
+.userDeleteConfirm_container{
+    width: 90%;
+    height: 75%;
+    background-color: rgba(227, 227, 227, 0.5);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.userDeleteConfirm_container form {
+    width: 500px;
+    height: 500px;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    border: solid 1px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.userDeleteConfirm_container form h3 {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+}
+
+.button_cancel{
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    border: solid 0px white;
+    background-color: #DCDAD8;
+}
+
+.userDeleteConfirm_container label {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.userDeleteConfirm_container input{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.userDeleteConfirm_container p {
+    background-color: rgba(244, 244, 83, 0.4);
+    border: solid 1px rgb(236, 236, 83);
+    padding: 5px;
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+.userDeleteConfirm_container p i {
+    color: yellow;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: black;
+    text-align: center;
+    text-justify: center;
+    padding: 1px;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_delete{
+    width: 100px;
+    height: 30px;
+    background-color: #CC5C5B;
+    border: solid 0.8px red;
+    border-radius: 10px;
+}
+
 
 @media (min-width: 930px){
     .userEdit_data{

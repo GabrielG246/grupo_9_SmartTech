@@ -4,6 +4,8 @@ const app = express();
 
 //REQUIRES
 const session= require('express-session');
+const cookieParser= require('cookie-parser')
+const rememberMe= require('./middlewares/rememberMeMidd')
 
         //PUBLIC SETTING 
 const path = require("path");
@@ -20,6 +22,10 @@ app.use(session({
         resave: true,
         saveUninitialized: true
         }));
+app.use(cookieParser())
+
+//MIDDLEWARES CREADOS
+app.use(rememberMe)
 
 
 //Sirve para capturar datos de formulario 

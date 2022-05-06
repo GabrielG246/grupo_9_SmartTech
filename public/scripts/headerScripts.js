@@ -28,4 +28,13 @@ window.addEventListener('load', function(){
             burguerButton.style.color='white'
         }
     });
+
+        //LOGOUT BUTTON//
+        let logOut_button= document.querySelector('.logOut_button')
+
+        logOut_button.addEventListener('click', (e)=>{
+            e.preventDefault()
+            req.session.userLogged= undefined;
+            res.redirect('/')
+        });
 })

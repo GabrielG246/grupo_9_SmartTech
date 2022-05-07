@@ -9,7 +9,8 @@
     <%-include('./partials/head')%>
 
     <link rel="stylesheet" href="/css/userEdit.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="/scripts/userEdit-delete.js"></script>
 
 </head>
 <body class="userBody">
@@ -32,9 +33,11 @@
             </div>
 
             <div class="userEdit_delete">
-                <a href="" class="userEdit_delete-a"><i class="fas fa-user-slash"></i> Eliminar</a>
+                <a href="#" class="userEdit_delete-a"><i class="fas fa-user-slash"></i> Eliminar</a>
             </div>
         </div>
+
+        <%-include('userDeleteConfirm')%>
     </main>
 
     <%-include('./partials/footer')%>

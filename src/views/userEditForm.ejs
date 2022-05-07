@@ -15,15 +15,15 @@
     
     <main class="userEdit_form-main">
 
-        <h1> Registrate  </h1>
+        <h1> Modificación de Perfil  </h1>
 
         <div class="userEdit_form-cont">
 
-            <form action="/users/userEditForm" method="POST" enctype="multipart/form-data">  
+            <form action="/users/profile/edit?_method=PUT" method="POST" enctype="multipart/form-data">  
 
                 <label for="name_label">Nombre</label>
                 <input type="text" name="userName" class="form_user-name" id="name_label"
-                value="<%=userLogged.userName%>">
+                value="<%=userLogged.name%>">
                 <%if(locals.errors && errors.userName){%>
                     <p class="errorMsg"> <%=errors.userName.msg%></p>
                 <%}%>
@@ -31,7 +31,7 @@
 
                 <label for="lastName_label">Apellido</label>
                 <input type="text" name="userSName" class="form_user-name" id="lastName_label"
-                value="<%=userLogged.userSName%>">
+                value="<%=userLogged.last_name%>">
                 <%if(locals.errors && errors.userSName){%>
                     <p class="errorMsg"> <%=errors.userSName.msg%></p>
                 <%}%>
@@ -39,7 +39,7 @@
 
                 <label for="email_label">Email</label>
                 <input type="email" name="userEmail" class="form_user-name" id="email_label"
-                value="<%=userLogged.userEmail%>">
+                value="<%=userLogged.email%>">
                 <%if(locals.errors && errors.userEmail){%>
                     <p class="errorMsg"> <%=errors.userEmail.msg%></p>
                 <%}%>
@@ -47,33 +47,34 @@
 
                 <label for="user_label">Nombre de Usuario</label>
                 <input type="text" name="userNickName" class="form_user-name" id="user_label"
-                value="<%=userLogged.userNickName%>">
+                value="<%=userLogged.username%>">
                 <%if(locals.errors && errors.userNickName){%>
                     <p class="errorMsg"> <%=errors.userNickName.msg%></p>
                 <%}%>
 
-
-                <label for="oldpass_label">Contraseña anterior</label>
-                <input type="password" name="userOldPass" class="form_user-name" id="oldpass_label">
-                <%if(locals.errors && errors.userPass){%>
-                    <p class="errorMsg"> <%=errors.userPass.msg%></p>
-                <%}%>
-
-                <label for="newpass_label">Contraseña nueva</label>
+                
+                <label for="newpass_label">Cambiar contraseña</label>
                 <input type="password" name="userNewPass" class="form_user-name" id="newpass_label">
                 <%if(locals.errors && errors.userPass){%>
                     <p class="errorMsg"> <%=errors.userPass.msg%></p>
-                <%}%>
-
-
+                    <%}%>
+                    
+                    
                 <label for="image">Foto de Usuario</label>
                 <input class="form_user-name" type="file" name="userImage" id="image"
                 value="<%= locals.old && old.userImage ? old.userImage:''%>">
                 <%if(locals.errors && errors.userImage){%>
                     <p class="errorMsg"> <%=errors.userImage.msg%></p>
                 <%}%>
+                        
+                <label class="userWarningPass"><i class="fas fa-exclamation"></i> <p>Para confirmar los cambios debe ingresar su contraseña</p></label>
 
-
+                <label for="oldpass_label">Contraseña</label>
+                <input type="password" name="userOldPass" class="form_user-name" id="oldpass_label">
+                <%if(locals.errors && errors.userOldPass){%>
+                    <p class="errorMsg"> <%=errors.userOldPass.msg%></p>
+                <%}%>
+                
                 <button type="submit" class="submit_button">Editar</button>
             </form>
 

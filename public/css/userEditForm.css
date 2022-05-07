@@ -25,6 +25,7 @@
     border-radius: 10px;
     max-width: 500px;
     padding-bottom: 10px;
+    margin: 10px 0 30px 0;
 }
 
 .form_user-name {
@@ -33,7 +34,7 @@
     border-radius: 40px;
     padding-left: 10px;
     font-size: 18px;
-    margin-bottom: 0px;
+    margin-bottom: 12.3px;
 }
 .userEdit_form-cont form label {
     display: flex;
@@ -52,7 +53,7 @@
     width: 130px;
     height: 30px;
     border-radius: 30px;
-    background-color: #30FF17;
+    background-color: #64C27C;
 }
 
 .errorMsg {
@@ -61,4 +62,27 @@
     margin-top: 0px;
     margin-bottom: 15px;
     
+}
+
+.userWarningPass{
+    background-color: rgba(244, 244, 83, 0.4);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+    padding-right: 5px;
+}
+
+.userWarningPass i {
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border: solid 0.5px black;
+    margin: 0 5px;
 }

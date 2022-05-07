@@ -18,6 +18,9 @@ const storage= multer.diskStorage({
 
 const upload= multer({storage});
 
+//MIDDLEWARES//
+const userIsAdmin= require('../middlewares/userIsAdmin')
+
 //CONTROLLERS//
 const productController= require('../controllers/productController');
 
@@ -28,11 +31,11 @@ router.get("/item/:id", productController.detail); // Detalle de producto
 router.get("/edit/item/:id", productController.edit); // Formulario de edicion de producto
 
 router.put("/edit/item/:id", productController.update); // Accion de formulario de edicion [PUT]
-router.get("/addProduct", productController.newProductGET); // Ruta para crear producto 
+router.get("/addProduct", userIsAdmin, productController.newProductGET); // Ruta para crear producto 
 
 router.post("/addProduct", upload.single("productImage"), productController.newProductPOST); //// Ruta para crear producto [POST]
 
-router.get("/delete/item/:id", productController.delete); // Formulario para eliminar producto
+router.get("/delete/item/:id", userIsAdmin, productController.delete); // Formulario para eliminar producto
 
 router.delete("/delete/item/:id", productController.destroy);// Accion de eliminado 
 

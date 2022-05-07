@@ -1,8 +1,21 @@
 <div class="button_options-container">
+
     <div class="arrow_of_button"></div>
+
     <ul class="button_options-list">
+
         <li class="button_config"> <a href=""> <i class="fa-solid fa-user"></i> Perfil </a> </li>
-        <li class="button_config"> <a href=""> <i class="fa-solid fa-right-from-bracket"></i>  Cerrar sesión </a> </li>
-        <li class="button_add-product"></li>
+
+        
+            <form action="/users/logOut" method="post">
+                <button type="submit" class="logOut_button-submit"><i class="fa-solid fa-right-from-bracket"></i>  Cerrar sesión</button>
+            </form>
+        
+
+        <li class="button_add-product">
+            <a href="#"> <i class="fas fa-upload"></i> Agregar producto </a>
+        </li>
+
     </ul>
+
 </div>

@@ -182,5 +182,10 @@
 
     .article_container {
         flex-wrap: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
     }
 }
+

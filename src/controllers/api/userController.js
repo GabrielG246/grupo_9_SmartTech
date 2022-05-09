@@ -5,13 +5,16 @@ const controller = {
 
     getAll: async (req, res) => {
         try {
-            const users = await db.User.findAll({ attributes: { exclude: ['password', 'username', 'roles_id', 'userImage'] } });
+            const users = await db.User.findAll({ attributes: { exclude: ['password', 'roles_id'] } });
 
             let usersResponse = users.map(user => ({
                 id: user.id,
                 name: user.name,
+                last_name: user.last_name,
                 email: user.email,
-                detail: `/api/users/${user.id}`
+                user: user.username,
+                userImage: `http://localhost:3005/img/usersImages/${user.userImage}`,
+                detail: `http://localhost:3005/api/users/${user.id}`
             }))
 
 
@@ -38,7 +41,7 @@ const controller = {
                 last_name: user.last_name,
                 email: user.email,
                 username: user.username,
-                userImage: `localhost:3005/img/usersImages/${user.userImage}`
+                userImage: `http://localhost:3005/img/usersImages/${user.userImage}`
             }
             res.status(200).json(
                 {

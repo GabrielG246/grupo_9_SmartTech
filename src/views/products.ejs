@@ -30,11 +30,12 @@
                     <% products.forEach(product => { %>
                     
                    
-                        <section class="article_container">
+                        <div class="article_container">
 
                             <a href="/products/item/<%=product.id %>"> <article> <img src="/img/productImages/<%= product.image %>"> </article> </a>
                             <p> <%=product.name %> </p>
-                        </section>
+                            <p> $ <%=product.price %> </p>
+                        </div>
                    
                     
                     <% }) %>

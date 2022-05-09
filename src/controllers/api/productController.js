@@ -12,7 +12,7 @@ const controller = {
     products: async (req, res) => {
 
         try {
-            const products = await db.Products.findAll({ attributes: { exclude: ['specifications', 'price', 'color'] } })
+            const products = await db.Products.findAll()
 
             let response = products.map(product => ({
                 id: product.id,
@@ -21,7 +21,8 @@ const controller = {
                 description: product.description,
                 specifications: product.specifications,
                 color: product.color,
-                detail: `/api/products/${product.id}`
+                image: `http://localhost:3005/img/productImages/${product.image}`,
+                detail: `http://localhost:3005/api/products/${product.id}`
             }))
 
 
@@ -54,7 +55,7 @@ const controller = {
                 description: product.description,
                 specifications: product.specifications,
                 color: product.color,
-                image: `localhost:3005/img/productImages/${product.image}`
+                image: `http://localhost:3005/img/productImages/${product.image}`
             }
             res.status(200).json(
                 {

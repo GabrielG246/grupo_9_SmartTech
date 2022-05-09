@@ -1,11 +1,13 @@
 // EXPRESS //
 const express = require("express");
 const app = express();
+const cors= require('cors');
 
 //REQUIRES
 const session= require('express-session');
 const cookieParser= require('cookie-parser')
 const rememberMe= require('./middlewares/rememberMeMidd')
+app.use(cors());
 
         //PUBLIC SETTING 
 const path = require("path");

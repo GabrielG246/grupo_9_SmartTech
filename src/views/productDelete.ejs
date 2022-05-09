@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/normalyze.css">
     <link rel="stylesheet" href="/css/login-style.css">
     <link rel="stylesheet" href="/css/register-style.css">
-    <link rel="stylesheet" href="/css/productEdit-style.css">
+    <link rel="stylesheet" href="/css/product-Delete.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
@@ -37,42 +37,52 @@
     <!--+++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
         <main>
+            <div class= "title">
+                <h1> Estas seguro de eliminar este producto ?  </h1>
+            </div>
 
-            <h1 class= "title"> Estas seguro de eliminar este producto ?  </h1>
 
             <div class="container_box">
 
-                <div class="formulario_edit">
+                <div class="info_box">
     
-                    <form action="/products/delete/item/<%=product.id %>?_method=DELETE" method="POST">  
-    
-                        <label for="name" class="bold">Nombre</label>
-                        <p class="form_user-name"> <%=product.name %> </p> 
-    
+                    <div class="paragraph">
+                        <p class="bold">Nombre</p>
+                        
+                        <p class="text"> <%=product.name %> </p> 
+                    </div>
+                        
+                    
+                    <div class="paragraph">
                         <label for="description" class="bold" >Descripción</label>
-                        <p class="form_user-name"> <%=product.description %> </p>
-    
+                        <p class="text"> <%=product.description %> </p>
+                    </div>
+
+
+                    <div class="paragraph">
                         <label for="price" class="bold" >Precio</label>
-                        <p class="form_user-name"> <%=product.price %> </p> 
-    
+                        <p class="text"> $ <%=product.price %> </p> 
+                    </div>
+
+                    <div class="paragraph">
                         <label for="color" class="bold" >Color</label>
-                        <p class="form_user-name"> <%=product.color %> </p>  
-    
+                        <p class="text"> <%=product.color %> </p>  
+                    </div>
+
+                    <div class="paragraph">
                         <label for="specs" class="bold">Especificaciones</label>
-                        <p class="form_user-name"> <%=product.specifications %> </p> 
-    
-                       
+                        <p class="text"> <%=product.specifications %> </p> 
+                    </div>
+                    <form class="button" action="/products/delete/item/<%=product.id %>?_method=DELETE" method="POST">  
                         <button type="submit" class="submit_button"> Eliminar </button>
                     </form>
-    
-           
-    
-                    
-    
                 </div>
-                <div>
+
+
+
+
+                <div class="image_box">
                     <img src="/img/productImages/<%=product.image %>">
-    
                 </div>
 
             </div>

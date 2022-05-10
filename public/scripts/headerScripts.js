@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
     burguerButton.addEventListener('click', ()=>{
         if(burguerButtonMenu.style.display=='none'){
             burguerButtonMenu.style.display='flex'
-            burguerButton.style.backgroundColor= 'azure'
+            burguerButton.style.backgroundColor= '#ECECEC'
             burguerButton.style.color='#506284'
             burguerButton.style.borderColor='black'
         } else {
@@ -29,12 +29,4 @@ window.addEventListener('load', function(){
         }
     });
 
-        //LOGOUT BUTTON//
-        let logOut_button= document.querySelector('.logOut_button')
-
-        logOut_button.addEventListener('click', (e)=>{
-            e.preventDefault()
-            req.session.userLogged= undefined;
-            res.redirect('/')
-        });
 })

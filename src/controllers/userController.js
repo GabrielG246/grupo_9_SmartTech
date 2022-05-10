@@ -250,6 +250,8 @@ const controller = {
 
   userEditDELETE: (req, res) => {
 
+    const errors= validationResult(req)
+
     db.User.findOne({ where: { username: session.userLogged.username } })
       .then(function (userToDelete) {
         if (bcrypt.compareSync(req.body.userDeleteConfirm_pass, userToDelete.password)) {
@@ -262,7 +264,7 @@ const controller = {
 
         }
         else {
-          res.render('userEdit', { errors: { userPass: { msg: 'Contraseña errónea' } } })
+          res.render('userEdit', {userLogged: session.userLogged, errors: { userPass: { msg: 'Contraseña errónea' } } })
         }
       })
 

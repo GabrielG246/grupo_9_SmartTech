@@ -1,10 +1,26 @@
 <div class="buttonBurguer_list-container">
     <div class="buttonBurguer_ul-draw"></div>
     <ul class="buttonBurguer_ul">
+
         <li class="buttonBurguer_li"><a href="/"><i class="fas fa-home buttonBurguerIcon"></i> Inicio</a></li>
+
+        <li class="buttonBurguer_li"><a href="/products"><i class="fas fa-mobile-alt"></i> Productos</a></li>
+
+        <%if(userLogged != undefined){%>
         <li class="buttonBurguer_li"><a href="/users/profile"><i class="fas fa-user buttonBurguerIcon"></i> Perfil</a></li>
-        <li class="buttonBurguer_li"><a href="/cart"><i class="fas fa-shopping-cart buttonBurguerIcon"></i> Carrito</a></li>
-        <li class="buttonBurguer_li"><a href="#"><i class="fa-solid fa-circle-dollar-to-slot buttonBurguerIcon"></i> Ofertas</a></li>
-        <li class="buttonBurguer_li"><a href="/users/logOut"><i class="fa-solid fa-right-from-bracket buttonBurguerIcon"></i> Cerrar sesion</a></li>
+        <%}%>
+
+        <%if(userLogged != undefined){%>
+            <form action="/users/logOut" method="post" class="buttonBurguer_li">
+                <button type="submit" class="logOut_button-submit buttonBurguer_li"><i class="fa-solid fa-right-from-bracket"> </i><p> Cerrar sesión</p></button>
+            </form>
+        <%} else {%>
+        <li class="buttonBurguer_li"> <a href="/users/login"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</a></li>
+        <%}%>
+
+        <%if(userLogged != undefined && userLogged.roles_id==2){%>
+            <li class="button_config"> <a href="/products/addProduct"><i class="fas fa-tools"></i> Añadir Producto</a> </li>
+        <%}%> 
+
     </ul>
 </div>

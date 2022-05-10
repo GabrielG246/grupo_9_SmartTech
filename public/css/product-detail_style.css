@@ -1,73 +1,194 @@
-.product-detail_body {
-    width: 100%;
-    height: 100%;
-    background-color: #efefef;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+*{
+    font-family: 'Roboto', sans-serif;
 }
 
-.product-detail_main_container {
-    width: 90%;
-}
-
-.product-detail_main {
-    width: 100%;
-    height: 98%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-
-}
-
-.product_primary-info{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
-.product-detail_image {
-    width: 60%;
-    height: auto;
-    border: solid 1px rgb(228, 228, 228);  
+.productDelete_button{
+    height: 30px;
+    width: 180px;
+    color: white;
+    background-color: #CC5C5B;
+    text-decoration: none;
+    border: solid 1px gray;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0;
 }
 
-.product-detail_image img {
+.productEdit_button{
+    height: 30px;
+    width: 180px;
+    color: white;
+    background-color: #4f74ab;
+    text-decoration: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.productDetail_body{
     width: 100%;
     height: 100%;
-}
-
-
-/*GENERAL INFORMATION STYLE*/
-.product-detail_gral_info {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
 }
 
-.product-name {
-    margin: 6px 0;
-    left: 500px;
+.productDetail_main-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.product-stars {}
-.product-stars button {}
+.productDetail_main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
 
-.product-price {}
+/*ELEMENTOS PRINCIPALES*/
 
-.product-specs {}
-.product-specs header {}
-.product-specs span {}
+.productDetail_primary-info{
+height: auto;
+background-color: white;
+padding-bottom: 10px;
+width: 80%;
+}
 
-.product-buy_button {}
+.productDetail_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
+}
 
-.product-add_cart {}
+.productDetail_image img{
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    height: 100%;
+    border: solid 1px lightblue;
+    border-radius: 5px;
+}
 
+.productDetail_sell-info{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(5, auto);
+}
 
+.productDetail_name{
+    grid-column: 2/10;
+    grid-row: 1/2;
+    margin-top: 10px;
+}
+
+.productDetail_stars{
+    grid-column: 2/10;
+    grid-row: 2/3;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.productDetail_stars button{
+    border: transparent;
+    background-color: transparent;
+}
+
+.productDetail_price{
+    grid-column: 2/8;
+    grid-row: 3/4;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.productDetail_specs{
+    grid-column: 2/10;
+    grid-row: 4/5;
+    margin-top: 15px;
+}
+
+.productDetail_buy-button{
+    grid-column: 2/4;
+    grid-row: 5/6;
+    margin-top: 10px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    width: 140px;
+    padding: 5px 2px;
+    background-color: lightblue;
+    height: 30px;
+}
+
+.productDetail_buy-button button{
+    border: transparent;
+    background-color: transparent;
+}
+
+.productDetail_add-cart{
+    grid-column: 5/7;
+    grid-row: 5/6;
+    margin-top: 10px;
+    border: solid 0.5px gray;
+    border-radius: 5px;
+    width: 150px;
+    padding: 5px 2px;
+    background-color: lightblue;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.productDetail_add-cart button{
+    border: transparent;
+    background-color: transparent;
+}
+
+/*SECCION DE INFORMACIÓN GENERAL*/
+.productDetail_info{
+    width: 90%;
+    background-color: #ECECEC;
+    border: solid 1px lightblue;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.productDetail_seller-info{
+    width: 90%;
+    background-color: #ECECEC;
+    border: solid 1px lightblue;
+    padding: 5px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+@media(min-width: 850px){
+    .productDetail_primary-info{
+        display: flex;
+    }
+
+    .productDetail_image{
+        width: 50%;
+        height: auto;
+    }
+
+    .productDetail_sell-info{
+        width: 50%;
+        height: auto;
+    }
+
+    .productDetail_add-cart{
+        grid-column: 6/8;
+    }
+}

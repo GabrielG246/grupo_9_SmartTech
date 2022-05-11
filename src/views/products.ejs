@@ -32,9 +32,15 @@
                     
                    
                         <section class="article_container">
-
-                            <a href="/products/item/<%=product.id %>"> <article> <img src="/img/productImages/<%= product.image %>"> </article> </a>
-                            <p> <%=product.name %> </p>
+                            <article> 
+                                    <a href="/products/item/<%=product.id %>"> 
+                                    <img src="/img/productImages/<%= product.image %>"> 
+                                    </a>
+                                    <div class="product_info-s">
+                                        <p> <%=product.name %> </p>
+                                        <p> $<%= product.price%> </p>
+                                    </div>      
+                                </article> 
                         </section>
                    
                     

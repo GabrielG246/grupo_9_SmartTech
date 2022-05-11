@@ -18,7 +18,7 @@ const {Op} = require("sequelize");
             }
         })
         .then((product)=>{
-            res.render('products',{userLogged: session.userLogged,product:product})
+            res.render('products',{userLogged: session.userLogged,products:product})
         })
         .catch((error)=>{
             res.send(error)

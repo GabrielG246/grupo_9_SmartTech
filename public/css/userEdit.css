@@ -84,6 +84,7 @@
     border-radius: 15px;
     border-color: solid 1px gray;
     margin: 0 12px;
+    position: relative;
 }
 
 .userEdit_delete-a{
@@ -183,6 +184,12 @@
     background-color: #CC5C5B;
     border: solid 0.8px red;
     border-radius: 10px;
+}
+
+.errorValidation{
+    color: red;
+    position:absolute;
+    bottom: -20px;
 }
 
 

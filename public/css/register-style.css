@@ -58,3 +58,8 @@
     margin-bottom: 15px;
     
 }
+
+.errorsContainer ul{
+    color: red;
+    list-style: none;
+}

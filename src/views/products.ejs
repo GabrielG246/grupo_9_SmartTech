@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/316d2b61a6.js" crossorigin="anonymous"></script>
+    <script src="/scripts/headerScripts.js"></script>
     <title>Productos</title>
 
     <link rel="stylesheet" href="/css/normalyze.css">
@@ -30,12 +31,17 @@
                     <% products.forEach(product => { %>
                     
                    
-                        <div class="article_container">
-
-                            <a href="/products/item/<%=product.id %>"> <article> <img src="/img/productImages/<%= product.image %>"> </article> </a>
-                            <p> <%=product.name %> </p>
-                            <p> $ <%=product.price %> </p>
-                        </div>
+                        <section class="article_container">
+                            <article> 
+                                    <a href="/products/item/<%=product.id %>"> 
+                                    <img src="/img/productImages/<%= product.image %>"> 
+                                    </a>
+                                    <div class="product_info-s">
+                                        <p> <%=product.name %> </p>
+                                        <p> $<%= product.price%> </p>
+                                    </div>      
+                                </article> 
+                        </section>
                    
                     
                     <% }) %>

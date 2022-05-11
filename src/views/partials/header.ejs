@@ -9,25 +9,27 @@
 
         <!--Boton de ofertas, home y carrito de compras-->
         <div class="nav_buttons">
-        <a href="#" class="nav_sale"> Ofertas </a>
-        <a href="/" class="nav_home"> <i class="fas fa-home"></i> </a>
-        <a href="/cart" class="nav_buy-cart">Carrito</a>
+        <a href="/" class="nav_medium-button"> <i class="fas fa-home"></i> INICIO </a>
+        <a href="/products" class="nav_medium-button"><i class="fas fa-mobile-alt"></i> PRODUCTOS </a>
         </div>
 
         <!--Botón hamburguesa, usuario y configuración de usuario-->
+        
         <div class="nav_right-buttons">
-            <label class="button-burger"> <i class="fas fa-bars"></i> </label>
-            <%-include('./buttonBurguerList')%>
-            
             <%if(userLogged==undefined){%>
                 <a href="/users/login" class="button-user"> <i class="far fa-user"></i> </a>
             <%} else {%>
                 <a href="/users/profile" class="button-user_img"> <img src="/img/usersImages/<%=userLogged.userImage%>"> </a> 
             <%}%>
 
-            <a href="#" class="button-config"> <i class="fas fa-cogs"></i> </a>
-        </div>
-
+            <label class="button-burger"> <i class="fas fa-bars"></i> </label>
+            
+            <%if(userLogged != undefined){%>
+                <a href="#" class="button-config"> <i class="fas fa-cogs"></i> </a>
+                <%}%>
+            </div>
+            
+            <%-include('./buttonBurguerList')%>
         <%-include('./listconfig')%>
         </div>
 

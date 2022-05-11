@@ -25,7 +25,16 @@
     <%- include('./partials/header') %>
     
     <!--++++++++++++++++++++++++++++++++++++++-->
+    <%if(userLogged != undefined && userLogged.roles_id==2){%>
+        <a href="/products/delete/item/<%=product.id%>" class="productDelete_button"><i class="fas fa-trash-alt"></i>Eliminar Producto</a>
+    <%}%>
+
+    <%if(userLogged != undefined && userLogged.roles_id==2){%>
+        <a href="/products/edit/item/<%=product.id%>" class="productEdit_button"><i class="fas fa-edit"></i>Editar Producto</a>
+    <%}%>
+
        <main class="productDetail_main-container">
+
 
             <div class="productDetail_main">
 
@@ -42,7 +51,7 @@
     
                         <h2 class="productDetail_name"> <%= product.name %> </h2>
     
-                        <div class="productDetail-stars">
+                        <div class="productDetail_stars">
                             <button value="oneStar"><i class="far fa-star"></i></button>
                             <button value="twoStar"><i class="far fa-star"></i></button>
                             <button value="threeStar"><i class="far fa-star"></i></button>
@@ -62,28 +71,28 @@
                         <a href="#"> <button>Comprar ahora <i class="fas fa-shopping-basket"></i></button> </a>
                         </div>
 
-                        <div class="productDetail_add-cart">
+                       <!--- <div class="productDetail_add-cart">
                         <button type="submit">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
-                        </div>  
+                        </div>  -->
                 
                     </div>
                     </div>
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-                <div class="productDetail-info">
-                    <h4>Información del producto</h4>
+                <div class="productDetail_info">
+                    <h4>Especificaciones del producto</h4>
                     <br>
-                    <br>
-                    <%= product.description %> 
+                    <%= product.specifications %> 
+                    
                 </div>
 
                 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
                 <div class="productDetail_seller-info">
-                    <h4>Información del vendedor</h4>
+                    <h4>Información del producto </h4>
                     <br>
-                    <%= product.info %> 
+                    <%= product.description %> 
                 </div>
 
                

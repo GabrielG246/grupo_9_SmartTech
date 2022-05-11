@@ -32,8 +32,11 @@
                 <a href="/users/profile/edit" class="userEdit_edit-a"><i class="fas fa-pen"></i> Editar Perfil</a>
             </div>
 
-            <div class="userEdit_delete">
+            <div class="userEdit_delete" id="userEdit_delete">
                 <a href="#" class="userEdit_delete-a"><i class="fas fa-user-slash"></i> Eliminar</a>
+                <%if(locals.errors && errors.userPass){%>
+                        <p class="errorValidation"><%=errors.userPass.msg%></p>
+                <%}%>
             </div>
         </div>
 
